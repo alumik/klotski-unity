@@ -1,4 +1,5 @@
-﻿using JetBrains.Annotations;
+﻿using FantomLib;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,11 +16,6 @@ public class SceneLoader : MonoBehaviour
     }
 
     public void QuitGame()
-    {
-        Invoke(nameof(_QuitGame), (float) 0.5);
-    }
-
-    private void _QuitGame()
     {
         Application.Quit();
     }
@@ -41,7 +37,7 @@ public class SceneLoader : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().buildIndex == 0)
             {
-                QuitGame();
+                FindObjectOfType<YesNoDialogController>().Show();
             }
             else
             {

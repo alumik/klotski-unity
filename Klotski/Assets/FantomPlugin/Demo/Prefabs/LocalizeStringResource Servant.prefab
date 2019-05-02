@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1970956838478322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4824981349794408}
+  - component: {fileID: 114606492732097214}
+  m_Layer: 0
+  m_Name: LocalizeStringResource Servant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4824981349794408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970956838478322}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114606492732097214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970956838478322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acf18b9b5c452e74689b2f9e1b4ee78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - id: saber
+    defaultLanguage: 10
+    list:
+    - language: 22
+      text: "\u30BB\u30A4\u30D0\u30FC"
+      fontSize: 0
+    - language: 40
+      text: "\u519B\u5200"
+      fontSize: 0
+    - language: 23
+      text: "\uBB34\uB825"
+      fontSize: 0
+    - language: 10
+      text: Saber
+      fontSize: 0
+  - id: archer
+    defaultLanguage: 10
+    list:
+    - language: 22
+      text: "\u30A2\u30FC\u30C1\u30E3\u30FC"
+      fontSize: 0
+    - language: 40
+      text: "\u5C04\u624B"
+      fontSize: 0
+    - language: 23
+      text: "\uAD81\uC218"
+      fontSize: 0
+    - language: 10
+      text: Archer
+      fontSize: 0
+  - id: rancer
+    defaultLanguage: 10
+    list:
+    - language: 22
+      text: "\u30E9\u30F3\u30B5\u30FC"
+      fontSize: 0
+    - language: 40
+      text: "\u5170\u65AF"
+      fontSize: 0
+    - language: 23
+      text: "\uB79C\uC11C"
+      fontSize: 0
+    - language: 10
+      text: Rancer
+      fontSize: 0
+  - id: caster
+    defaultLanguage: 10
+    list:
+    - language: 22
+      text: "\u30AD\u30E3\u30B9\u30BF\u30FC"
+      fontSize: 0
+    - language: 40
+      text: "\u9B54\u672F\u5E08"
+      fontSize: 0
+    - language: 23
+      text: "\uB9E4\uC9C1 \uCE90\uC2A4\uD130"
+      fontSize: 0
+    - language: 10
+      text: Caster
+      fontSize: 0
+  - id: rider
+    defaultLanguage: 10
+    list:
+    - language: 22
+      text: "\u30E9\u30A4\u30C0\u30FC"
+      fontSize: 0
+    - language: 40
+      text: "\u9644\u4EF6"
+      fontSize: 0
+    - language: 23
+      text: "\uD0C0\uB294 \uC0AC\uB78C"
+      fontSize: 0
+    - language: 10
+      text: Rider
+      fontSize: 0
+  - id: berserker
+    defaultLanguage: 10
+    list:
+    - language: 22
+      text: "\u30D0\u30FC\u30B5\u30FC\u30AB\u30FC"
+      fontSize: 0
+    - language: 40
+      text: "\u72C2\u6218\u58EB"
+      fontSize: 0
+    - language: 23
+      text: "\uB9F9\uB82C\uD55C"
+      fontSize: 0
+    - language: 10
+      text: Berserker
+      fontSize: 0
+  - id: assassin
+    defaultLanguage: 10
+    list:
+    - language: 22
+      text: "\u30A2\u30B5\u30B7\u30F3"
+      fontSize: 0
+    - language: 40
+      text: "\u523A\u5BA2"
+      fontSize: 0
+    - language: 23
+      text: "\uC554\uC0B4\uC790"
+      fontSize: 0
+    - language: 10
+      text: Assassin
+      fontSize: 0

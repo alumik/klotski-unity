@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1850855835404450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4386300430350252}
+  - component: {fileID: 114782727090619238}
+  - component: {fileID: 114130844826581738}
+  m_Layer: 0
+  m_Name: PermissionCheckController WRITE_EXTERNAL_STORAGE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4386300430350252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850855835404450}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114782727090619238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850855835404450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e387d0a6bea039c4c8d44a4296b7ffd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  permission: android.permission.WRITE_EXTERNAL_STORAGE
+  checkOnStart: 1
+  requestWhenNotGranted: 1
+  title: To use this function, you need "Read/Write storage" permission.
+  message: "This permission is used for:\r\n\xB7 Get the file information of the storage.\r\n\xB7
+    Save the file to storage.\r\n\xB7 Get the path of the storage folder."
+  style: android:Theme.DeviceDefault.Light.Dialog.Alert
+  localize:
+    localizeResource: {fileID: 114130844826581738}
+    titleID: title
+    messageID: message
+  OnResult:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: FantomLib.PermissionCheckController+ResultHandler, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGranted:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnDenied:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnAllowed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: FantomLib.PermissionCheckController+AllowedHandler, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &114130844826581738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850855835404450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acf18b9b5c452e74689b2f9e1b4ee78b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - id: title
+    defaultLanguage: 10
+    list:
+    - language: 22
+      text: "\u3053\u306E\u6A5F\u80FD\u3092\u4F7F\u3046\u306B\u306F\u300C\u30B9\u30C8\u30EC\u30FC\u30B8\u306E\u8AAD\u307F\u66F8\u304D\u300D\u6A29\u9650\u304C\u5FC5\u8981\u3067\u3059\u3002"
+      fontSize: 0
+    - language: 40
+      text: "\u8981\u4F7F\u7528\u6B64\u529F\u80FD\uFF0C\u60A8\u9700\u8981\u201C\u8BFB/\u5199\u5B58\u50A8\u201D\u6743\u9650\u3002"
+      fontSize: 0
+    - language: 23
+      text: "\uC774 \uAE30\uB2A5\uC744 \uC0AC\uC6A9\uD558\uB824\uBA74 \"\uC800\uC7A5
+        \uC77D\uAE30 \uBC0F \uC4F0\uAE30\"\uAD8C\uD55C\uC774 \uC788\uC5B4\uC57C\uD569\uB2C8\uB2E4."
+      fontSize: 0
+    - language: 10
+      text: To use this function, you need "Read/Write storage" permission.
+      fontSize: 0
+  - id: message
+    defaultLanguage: 10
+    list:
+    - language: 22
+      text: "\u3053\u306E\u6A29\u9650\u306F\u4EE5\u4E0B\u306B\u5229\u7528\u3055\u308C\u307E\u3059\uFF1A\r\n\u30FB\u30B9\u30C8\u30EC\u30FC\u30B8\u306E\u30D5\u30A1\u30A4\u30EB\u306E\u60C5\u5831\u3092\u53D6\u5F97\u3057\u307E\u3059\u3002\r\n\u30FB\u30B9\u30C8\u30EC\u30FC\u30B8\u306B\u30D5\u30A1\u30A4\u30EB\u3092\u4FDD\u5B58\u3057\u307E\u3059\u3002\r\n\u30FB\u30B9\u30C8\u30EC\u30FC\u30B8\u306E\u30D5\u30A9\u30EB\u30C0\u306E\u30D1\u30B9\u3092\u53D6\u5F97\u3057\u307E\u3059\u3002"
+      fontSize: 0
+    - language: 40
+      text: "\u6B64\u6743\u9650\u7528\u4E8E\uFF1A\r\n\xB7\u68C0\u7D22\u5B58\u50A8\u7684\u6587\u4EF6\u4FE1\u606F\u3002\r\n\xB7\u5C06\u6587\u4EF6\u4FDD\u5B58\u5230\u5B58\u50A8\u3002\r\n\xB7\u83B7\u53D6\u5B58\u50A8\u6587\u4EF6\u5939\u7684\u8DEF\u5F84\u3002"
+      fontSize: 0
+    - language: 23
+      text: "\uC774 \uAD8C\uD55C\uC740 \uB2E4\uC74C\uC5D0 \uC0AC\uC6A9\uB429\uB2C8\uB2E4
+        :\r\n\xB7 \uC2A4\uD1A0\uB9AC\uC9C0\uC758 \uD30C\uC77C \uC815\uBCF4\uB97C \uAC00\uC838\uC635\uB2C8\uB2E4.\r\n\xB7
+        \uC2A4\uD1A0\uB9AC\uC9C0\uC5D0 \uD30C\uC77C\uC744 \uC800\uC7A5\uD569\uB2C8\uB2E4.\r\n\xB7
+        \uC800\uC7A5 \uD3F4\uB354\uC758 \uACBD\uB85C\uB97C \uAC00\uC838\uC635\uB2C8\uB2E4."
+      fontSize: 0
+    - language: 10
+      text: "This permission is used for:\r\n\xB7 Get the file information of the
+        storage.\r\n\xB7 Save the file to storage.\r\n\xB7 Get the path of the storage
+        folder."
+      fontSize: 0
