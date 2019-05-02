@@ -1,49 +1,59 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-    [SerializeField] private float speed = 2000;
-    
-    private int mMoveX;
-    private int mMoveY;
-    private bool mMoving;
-    private bool mIsMainBlock;
-    private Vector2 mTargetPos;
-    private Vector2[]
+    [SerializeField] private float moveSpeed = 100;
 
-    public void SetAsMainBlock()
-    {
-        mIsMainBlock = true;
-    }
+    private Vector3 mPMousePos;
 
-    private void Update()
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if(mMoving)
+        if (CompareTag("Main Block") && other.gameObject.CompareTag("Exit"))
         {
-            var distance = Vector2.Distance(transform.position, mTargetPos);
-            if(distance < 0.1f)
-            {
-                mMoving = false;
-                mMoveX = 0;
-                mMoveY = 0;
-                DragMove.Instance.Stop();
-            }
-            else
-            {
-                transform.position = Vector2.MoveTowards(transform.position, mTargetPos, speed * Time.deltaTime);
-            }
+            Debug.Log("Game Won");
         }
     }
-    
-    public void ChangeMove(int moveStep, bool movState)
+
+    private void OnMouseDown()
     {
-        //startPos = transform.localPosition;
-        targetPos = new Vector2(transform.localPosition.x + movFowardX * moveStep * 160, transform.localPosition.y + movFowardY * moveStep * 160);
-        moveState = movState;
+        if (Camera.main != null)
+        {
+            var mouseScreenPos = Input.mousePosition;
+            mouseScreenPos.z = 10f;
+            mPMousePos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        }
     }
-    private void OnDestroy()
+
+    private void OnMouseDrag()
     {
-        woodFiled = null;
+        if (Camera.main != null)
+        {
+            var mouseScreenPos = Input.mousePosition;
+            mouseScreenPos.z = 10f;
+            var mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
+            gameObject.GetComponent<Rigidbody2D>().velocity = (mouseWorldPos - mPMousePos) * moveSpeed;
+            mPMousePos = mouseWorldPos;
+        }
+    }
+
+    private void OnMouseUp()
+    {
+        gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        var pos = transform.position;
+        var minDistance = float.PositiveInfinity;
+        Vector2 minPos = pos;
+        foreach (var gridPos in PlayArea.instance.GetGridPos())
+        {
+            var distance = Vector2.Distance(pos, gridPos);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                minPos = gridPos;
+            }
+        }
+
+        transform.position = minPos;
     }
 }
