@@ -20,6 +20,7 @@ public class PlayArea : MonoBehaviour
     private void Start()
     {
         mStageConfig = Store.NextStageConfig;
+        Store.NextStageConfig = null;
         InitGrid();
         InitBlocks();
     }
@@ -27,7 +28,8 @@ public class PlayArea : MonoBehaviour
     public void Reset()
     {
         RemoveBlocks();
-        Start();
+        InitGrid();
+        InitBlocks();
     }
 
     public Vector2[,] GetGridPos()

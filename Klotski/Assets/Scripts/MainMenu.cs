@@ -10,10 +10,4 @@ public class MainMenu : MonoBehaviour
             FindObjectOfType<YesNoDialogController>().Show();
         }
     }
-
-    public void LoadStage()
-    {
-        Store.NextStageConfig = Resources.Load<StageConfig>("Stages/Stage 1");
-        FindObjectOfType<SceneLoader>().LoadNextScene();
-    }
 }
