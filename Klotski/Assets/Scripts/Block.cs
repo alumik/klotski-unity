@@ -2,7 +2,7 @@
 
 public class Block : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 100;
+    [SerializeField] private float moveSpeed = 80;
 
     private Vector3 mPMousePos;
 
