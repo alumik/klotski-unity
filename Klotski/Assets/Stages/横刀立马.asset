@@ -10,56 +10,37 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e35dd0ea9336904aab40cec791214f3, type: 3}
-  m_Name: Stage 1
+  m_Name: "\u6A2A\u5200\u7ACB\u9A6C"
   m_EditorClassIdentifier: 
   blocks:
   - type: 0
-    width: 1
-    height: 1
     x: 0
     y: 0
   - type: 0
-    width: 1
-    height: 1
     x: 1
     y: 1
   - type: 0
-    width: 1
-    height: 1
     x: 2
     y: 1
   - type: 0
-    width: 1
-    height: 1
     x: 3
     y: 0
   - type: 1
-    width: 1
-    height: 2
     x: 0
     y: 1
   - type: 1
-    width: 1
-    height: 2
     x: 0
     y: 3
   - type: 1
-    width: 1
-    height: 2
     x: 3
     y: 1
   - type: 1
-    width: 1
-    height: 2
     x: 3
     y: 3
   - type: 2
-    width: 2
-    height: 1
     x: 1
     y: 2
   - type: 3
-    width: 2
-    height: 2
     x: 1
     y: 3
+  stageName: "\u6A2A\u5200\u7ACB\u9A6C"

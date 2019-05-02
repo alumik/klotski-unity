@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayArea : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class PlayArea : MonoBehaviour
         Store.NextStageConfig = null;
         InitGrid();
         InitBlocks();
+        GameObject.Find("Stage Name").GetComponent<Text>().text = mStageConfig.GetStageName();
     }
 
     public void Reset()

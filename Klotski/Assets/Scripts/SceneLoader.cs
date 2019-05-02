@@ -9,7 +9,7 @@ public class SceneLoader : MonoBehaviour
     {
         Invoke(nameof(_LoadNextScene), (float) 0.5);
     }
-    
+
     public void LoadPreviousScene()
     {
         Invoke(nameof(_LoadPreviousScene), (float) 0.5);
@@ -35,7 +35,7 @@ public class SceneLoader : MonoBehaviour
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
-    
+
     public void _LoadPreviousScene()
     {
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
