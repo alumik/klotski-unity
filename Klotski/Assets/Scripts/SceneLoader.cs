@@ -5,19 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public void LoadNextScene()
+    public void LoadNextSceneDelay(float delay)
     {
-        Invoke(nameof(_LoadNextScene), (float) 0.5);
+        Invoke(nameof(LoadNextScene), delay);
     }
 
-    public void LoadPreviousScene()
+    public void LoadPreviousSceneDelay(float delay)
     {
-        Invoke(nameof(_LoadPreviousScene), (float) 0.5);
+        Invoke(nameof(LoadPreviousScene), delay);
     }
 
-    public void LoadStartScene()
+    public void LoadStartSceneDelay(float delay)
     {
-        Invoke(nameof(_LoadStartScene), (float) 0.5);
+        Invoke(nameof(LoadStartScene), delay);
     }
 
     public void QuitGame()
@@ -25,18 +25,18 @@ public class SceneLoader : MonoBehaviour
         Application.Quit();
     }
 
-    private void _LoadStartScene()
+    public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
     }
 
-    public void _LoadNextScene()
+    public void LoadNextScene()
     {
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
-    public void _LoadPreviousScene()
+    public void LoadPreviousScene()
     {
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex - 1);

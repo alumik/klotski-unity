@@ -636,8 +636,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748738563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.088, y: -4.274, z: 4}
-  m_LocalScale: {x: 12.01921, y: 12.409995, z: 1}
+  m_LocalPosition: {x: -0.02, y: -3.754, z: 4}
+  m_LocalScale: {x: 12.01921, y: 13.440024, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1436,7 +1436,7 @@ PrefabInstance:
     - target: {fileID: 7189100228338215369, guid: b0727778de9d5944fbaffdb8b2e59126,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadPreviousScene
+      value: LoadPreviousSceneDelay
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0727778de9d5944fbaffdb8b2e59126, type: 3}

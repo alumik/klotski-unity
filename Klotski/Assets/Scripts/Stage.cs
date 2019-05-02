@@ -6,7 +6,7 @@ public class Stage : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
-            FindObjectOfType<SceneLoader>().LoadStartScene();
+            FindObjectOfType<SceneLoader>().LoadPreviousScene();
         }
     }
 }

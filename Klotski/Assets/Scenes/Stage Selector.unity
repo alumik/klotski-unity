@@ -697,31 +697,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 553176437}
-    - target: {fileID: 7189100228338215369, guid: b0727778de9d5944fbaffdb8b2e59126,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadPreviousScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 9034570608024020452, guid: b0727778de9d5944fbaffdb8b2e59126,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9034570608024020452, guid: b0727778de9d5944fbaffdb8b2e59126,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9034570608024020452, guid: b0727778de9d5944fbaffdb8b2e59126,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9034570608024020452, guid: b0727778de9d5944fbaffdb8b2e59126,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0727778de9d5944fbaffdb8b2e59126, type: 3}
 --- !u!224 &443254885 stripped
