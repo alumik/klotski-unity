@@ -30,19 +30,4 @@ public class SceneLoader : MonoBehaviour
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown("escape"))
-        {
-            if (SceneManager.GetActiveScene().buildIndex == 0)
-            {
-                FindObjectOfType<YesNoDialogController>().Show();
-            }
-            else
-            {
-                LoadStartScene();
-            }
-        }
-    }
 }

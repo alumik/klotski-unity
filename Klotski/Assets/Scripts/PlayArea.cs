@@ -5,9 +5,9 @@ public class PlayArea : MonoBehaviour
     [SerializeField] private Vector2 origin;
     [SerializeField] private float cellSize;
     [SerializeField] private GameObject[] blockPrefabs;
-    [SerializeField] private StageConfig stageConfig;
 
     private GameObject[,] mGrid;
+    private StageConfig mStageConfig;
     private Vector2[,] mGridPos;
 
     public static PlayArea instance { get; private set; }
@@ -19,6 +19,7 @@ public class PlayArea : MonoBehaviour
 
     private void Start()
     {
+        mStageConfig = Store.NextStageConfig;
         InitGrid();
         InitBlocks();
     }
@@ -57,7 +58,7 @@ public class PlayArea : MonoBehaviour
 
     private void InitBlocks()
     {
-        foreach (var block in stageConfig.GetBlocks())
+        foreach (var block in mStageConfig.GetBlocks())
         {
             var pos = mGridPos[block.x, block.y];
             var blockObject = Instantiate(

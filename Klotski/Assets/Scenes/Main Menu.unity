@@ -301,7 +301,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1191338403443414035}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1591655362}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e348d535c0c4c14479b3b283721d6b30, type: 3}
@@ -1064,6 +1064,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125019497}
   m_CullTransparentMesh: 0
+--- !u!1 &1591655362 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1191338403337266437, guid: 4d5acc10b24dfdf4fa40db4b5f4c2893,
+    type: 3}
+  m_PrefabInstance: {fileID: 1191338403443414035}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1591655363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591655362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd9fb0f02e87af24ab07236006eb70fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1818238670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,8 +1997,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 179597591}
-        m_MethodName: LoadNextScene
+      - m_Target: {fileID: 1591655363}
+        m_MethodName: LoadStage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
