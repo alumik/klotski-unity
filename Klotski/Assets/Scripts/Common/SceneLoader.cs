@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,6 +22,11 @@ namespace Common
             Invoke(nameof(LoadNextScene), delay);
         }
 
+        public void LoadSceneDelay(int sceneIndex, float delay)
+        {
+            StartCoroutine(LoadSceneCoroutine(sceneIndex, delay));
+        }
+
         public void LoadStartScene()
         {
             Store.LastSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -39,6 +45,17 @@ namespace Common
             var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
             Store.LastSceneIndex = currentSceneIndex;
             SceneManager.LoadScene(currentSceneIndex + 1);
+        }
+        
+        public void LoadScene(int sceneIndex)
+        {
+            SceneManager.LoadScene(sceneIndex);
+        }
+
+        IEnumerator LoadSceneCoroutine(int sceneIndex, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            LoadScene(sceneIndex);
         }
 
         public void QuitGame()

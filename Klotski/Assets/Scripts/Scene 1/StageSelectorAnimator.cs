@@ -28,6 +28,12 @@ namespace Scene_1
             GetComponent<SceneLoader>().LoadNextSceneDelay((float) 0.5);
         }
 
+        public void GameInfo()
+        {
+            PlayHideAnimation();
+            GetComponent<SceneLoader>().LoadSceneDelay(Store.SceneGameInfo, (float) 0.5);
+        }
+
         private void PlayHideAnimation()
         {
             foreach (var animator in animators)

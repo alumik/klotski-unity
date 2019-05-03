@@ -8,5 +8,7 @@
         public static int Steps;
         public static float LastScrollPosition;
         public const int SceneMainMenu = 0;
+        public const int SceneLevelSelector = 1;
+        public const int SceneGameInfo = 4;
     }
 }
