@@ -67,7 +67,7 @@ namespace Scene_2
                 }
             }
 
-            if (BackgroundMusic.Instance && BackgroundMusic.Instance.GetComponent<AudioSource>().isPlaying)
+            if (BackgroundMusic.Instance != null && BackgroundMusic.Instance.GetComponent<AudioSource>().isPlaying)
             {
                 mAudioSource.PlayOneShot(mAudioSource.clip);
             }

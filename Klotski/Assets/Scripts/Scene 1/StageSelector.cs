@@ -1,4 +1,5 @@
-﻿using Scene_0;
+﻿using Common;
+using Scene_0;
 using TMPro;
 using UnityEngine;
 
@@ -10,6 +11,10 @@ namespace Scene_1
 
         private void Start()
         {
+            if (Camera.main != null)
+            {
+                Camera.main.backgroundColor = Store.CurrentColor;
+            }
             ChangeBgmButton();
         }
 
@@ -23,7 +28,7 @@ namespace Scene_1
 
         private void ChangeBgmButton()
         {
-            if (BackgroundMusic.Instance)
+            if (BackgroundMusic.Instance != null)
             {
                 bgmButton.text = BackgroundMusic.Instance.GetComponent<AudioSource>().isPlaying ? "\uf026" : "\uf6a9";
             }

@@ -11,6 +11,10 @@ namespace Scene_2
 
         private void Start()
         {
+            if (Camera.main != null)
+            {
+                Camera.main.backgroundColor = Store.CurrentColor;
+            }
             stageName.text = Store.NextStageConfig.GetStageName();
         }
 

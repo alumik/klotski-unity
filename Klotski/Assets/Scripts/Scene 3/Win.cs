@@ -12,6 +12,10 @@ namespace Scene_3
 
         private void Start()
         {
+            if (Camera.main != null)
+            {
+                Camera.main.backgroundColor = Store.CurrentColor;
+            }
             time.text = "用时 " + Store.Time;
             stepCounter.text = "总步数 " + Store.Steps;
             stageName.text = Store.NextStageConfig.GetStageName();

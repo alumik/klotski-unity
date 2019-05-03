@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Common;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Scene_4
@@ -10,6 +11,10 @@ namespace Scene_4
 
         private void Start()
         {
+            if (Camera.main != null)
+            {
+                Camera.main.backgroundColor = Store.CurrentColor;
+            }
             versionStringText.text = versionString;
         }
     }

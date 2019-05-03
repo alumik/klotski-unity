@@ -547,6 +547,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button Panel To Hide
       objectReference: {fileID: 0}
+    - target: {fileID: 1414184238379640217, guid: 73feffd3cbea8cc4aa795002f677d061,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1414184238379640217, guid: 73feffd3cbea8cc4aa795002f677d061,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1414184238379640217, guid: 73feffd3cbea8cc4aa795002f677d061,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1414184238379640217, guid: 73feffd3cbea8cc4aa795002f677d061,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1414184238379640217, guid: 73feffd3cbea8cc4aa795002f677d061,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1414184238379640217, guid: 73feffd3cbea8cc4aa795002f677d061,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 1414184236651785762, guid: 73feffd3cbea8cc4aa795002f677d061,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -707,6 +737,11 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 60
       objectReference: {fileID: 0}
+    - target: {fileID: 1414184236633510652, guid: 73feffd3cbea8cc4aa795002f677d061,
+        type: 3}
+      propertyPath: m_text
+      value: \uf1fc
+      objectReference: {fileID: 0}
     - target: {fileID: 9161595032469221722, guid: 73feffd3cbea8cc4aa795002f677d061,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -731,36 +766,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1414184238379640217, guid: 73feffd3cbea8cc4aa795002f677d061,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1414184238379640217, guid: 73feffd3cbea8cc4aa795002f677d061,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1414184238379640217, guid: 73feffd3cbea8cc4aa795002f677d061,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1414184238379640217, guid: 73feffd3cbea8cc4aa795002f677d061,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1414184238379640217, guid: 73feffd3cbea8cc4aa795002f677d061,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 1414184238379640217, guid: 73feffd3cbea8cc4aa795002f677d061,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 9161595032119794191, guid: 73feffd3cbea8cc4aa795002f677d061,
         type: 3}
