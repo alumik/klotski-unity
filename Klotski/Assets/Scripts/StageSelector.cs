@@ -19,7 +19,10 @@ public class StageSelector : MonoBehaviour
             stageItemObject.GetComponent<RectTransform>().anchoredPosition =
                 new Vector3(0, startingPosition - i * itemHeight, 0);
             var stageConfig = stageConfigs[i];
-            stageItemObject.GetComponent<Button>().onClick.AddListener(() => { LoadStage(stageConfig); });
+            stageItemObject.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                FindObjectOfType<StageSelectorAnimator>().LoadStage(stageConfig);
+            });
         }
 
         scrollContent.GetComponent<RectTransform>().sizeDelta = new Vector2(0, stageConfigs.Length * itemHeight);
@@ -31,11 +34,5 @@ public class StageSelector : MonoBehaviour
         {
             FindObjectOfType<SceneLoader>().LoadPreviousScene();
         }
-    }
-
-    private void LoadStage(StageConfig stageConfig)
-    {
-        Store.NextStageConfig = stageConfig;
-        FindObjectOfType<SceneLoader>().LoadNextSceneDelay((float) 0.3);
     }
 }
