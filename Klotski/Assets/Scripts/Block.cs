@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Block : MonoBehaviour
 {
@@ -7,10 +6,12 @@ public class Block : MonoBehaviour
 
     private Vector3 mPMousePos;
     private Vector3 mPPos;
+    private AudioSource mAudioSource;
 
     private void Start()
     {
         mPPos = transform.position;
+        mAudioSource = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -61,6 +62,7 @@ public class Block : MonoBehaviour
             }
         }
 
+        mAudioSource.PlayOneShot(mAudioSource.clip);
         transform.position = minPos;
         if (Vector3.Distance(minPos, mPPos) > 0.1f)
         {
