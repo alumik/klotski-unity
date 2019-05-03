@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,7 +28,7 @@ public class StageSelector : MonoBehaviour
             });
         }
 
-        scrollContent.GetComponent<RectTransform>().sizeDelta = new Vector2(0, stageConfigs.Length * itemHeight);
+        scrollContent.GetComponent<RectTransform>().sizeDelta = new Vector2(0, Mathf.Ceil(stageConfigs.Length / 2.0f) * itemHeight);
         
         if (BackgroundMusic.Instance && BackgroundMusic.Instance.GetComponent<AudioSource>().isPlaying)
         {

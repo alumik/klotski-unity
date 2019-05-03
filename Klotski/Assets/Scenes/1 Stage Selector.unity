@@ -1238,11 +1238,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stageConfigs:
   - {fileID: 11400000, guid: 3f6b43a084d5b0b44adbfdcc6d106877, type: 2}
-  - {fileID: 11400000, guid: bb789c2befd229b40be9e9e4fd04b1ab, type: 2}
-  - {fileID: 11400000, guid: 14fe05c4a7ca7a04c9e0633a6296d360, type: 2}
+  - {fileID: 11400000, guid: 6d41afa88d7f8164f8f4a20c7acb96e6, type: 2}
+  - {fileID: 11400000, guid: 30354672e3147764a8519cb218d41a0c, type: 2}
   - {fileID: 11400000, guid: c9614d72c17f9994f8f036eee70b991e, type: 2}
-  - {fileID: 11400000, guid: 184acafa7cfe6d544be8271ce0e0127b, type: 2}
-  - {fileID: 11400000, guid: 0e59da0f2c3b3c94c87a415dad14eb3e, type: 2}
+  - {fileID: 11400000, guid: 14fe05c4a7ca7a04c9e0633a6296d360, type: 2}
+  - {fileID: 11400000, guid: 106361820bdab9842bb4be10851b34a8, type: 2}
+  - {fileID: 11400000, guid: ac6a5a6ef0d789c42a4583d5dcced146, type: 2}
+  - {fileID: 11400000, guid: d65c791b3ef3e6343b79bcb5053acc07, type: 2}
+  - {fileID: 11400000, guid: d536eff27c0c9c443806fd790abb04c3, type: 2}
+  - {fileID: 11400000, guid: 8a80bc1bbbfc38a4ca4ea8c4258c2ca3, type: 2}
+  - {fileID: 11400000, guid: 4e73f9791400d6d4b9dc0d05b44b8651, type: 2}
+  - {fileID: 11400000, guid: 5c17fbac9d01f684e84427c883677852, type: 2}
+  - {fileID: 11400000, guid: 7b4bf55e6ee16c643bc204456d367f41, type: 2}
+  - {fileID: 11400000, guid: bb789c2befd229b40be9e9e4fd04b1ab, type: 2}
   scrollContent: {fileID: 285096283}
   stageItem: {fileID: 7873683264801154273, guid: 9a1dd758e8870c04ea1b5775fcb11ecc,
     type: 3}

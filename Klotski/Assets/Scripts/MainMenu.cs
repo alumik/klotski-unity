@@ -47,13 +47,13 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    private void OnApplicationQuit()
-    {
-        Process.GetCurrentProcess().Kill();
-        ProcessThreadCollection pt = Process.GetCurrentProcess().Threads;
-        foreach (ProcessThread p in pt)
-        {
-            p.Dispose();
-        }
-    }
+//    private void OnApplicationQuit()
+//    {
+//        Process.GetCurrentProcess().Kill();
+//        ProcessThreadCollection pt = Process.GetCurrentProcess().Threads;
+//        foreach (ProcessThread p in pt)
+//        {
+//            p.Dispose();
+//        }
+//    }
 }
