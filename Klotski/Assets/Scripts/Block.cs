@@ -62,7 +62,7 @@ public class Block : MonoBehaviour
             }
         }
 
-        if (BackgroundMusic.Instance.GetComponent<AudioSource>().isPlaying)
+        if (BackgroundMusic.Instance && BackgroundMusic.Instance.GetComponent<AudioSource>().isPlaying)
         {
             mAudioSource.PlayOneShot(mAudioSource.clip);
         }

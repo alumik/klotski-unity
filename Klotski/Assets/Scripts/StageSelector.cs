@@ -29,7 +29,7 @@ public class StageSelector : MonoBehaviour
 
         scrollContent.GetComponent<RectTransform>().sizeDelta = new Vector2(0, stageConfigs.Length * itemHeight);
         
-        if (BackgroundMusic.Instance.GetComponent<AudioSource>().isPlaying)
+        if (BackgroundMusic.Instance && BackgroundMusic.Instance.GetComponent<AudioSource>().isPlaying)
         {
             bgmButton.text = "\uf026";
         }
