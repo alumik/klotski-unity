@@ -16,6 +16,7 @@ public class StageAnimator : MonoBehaviour
 
     private static void PlayHideAnimation()
     {
+        BackgroundMusic.Instance.GetComponent<AudioLowPassFilter>().enabled = false;
         var anim = GameObject.Find("Back Button").GetComponent<Animator>();
         anim.Play("Back Button Hide");
         anim = GameObject.Find("Reset Button").GetComponent<Animator>();

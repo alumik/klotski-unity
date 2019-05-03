@@ -1,5 +1,4 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -38,6 +37,12 @@ public class StageSelector : MonoBehaviour
         {
             bgmButton.text = "\uf6a9";
         }
+
+        if (Store.LastSceneIndex != 0)
+        {
+            var pos = scrollContent.GetComponent<RectTransform>().localPosition;
+            scrollContent.GetComponent<RectTransform>().localPosition = new Vector3(pos.x, Store.ScrollPosition, pos.z);
+        }
     }
 
     private void Update()
@@ -46,5 +51,10 @@ public class StageSelector : MonoBehaviour
         {
             FindObjectOfType<StageSelectorAnimator>().Back();
         }
+    }
+
+    private void OnDestroy()
+    {
+        Store.ScrollPosition = scrollContent.GetComponent<RectTransform>().localPosition.y;
     }
 }

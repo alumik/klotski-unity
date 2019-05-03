@@ -880,6 +880,7 @@ GameObject:
   - component: {fileID: 1763769055}
   - component: {fileID: 1763769054}
   - component: {fileID: 1763769053}
+  - component: {fileID: 1763769056}
   m_Layer: 0
   m_Name: Background Music
   m_TagString: Untagged
@@ -1009,6 +1010,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!169 &1763769056
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763769052}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.045020465
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!224 &1818238671 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3047770345110065253, guid: 72819a2bc26f8d646a672d715d1749ce,
@@ -1108,6 +1134,48 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
+        type: 3}
+      propertyPath: m_text
+      value: \uf026
+      objectReference: {fileID: 0}
+    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
+        type: 3}
+      propertyPath: m_textInfo.materialCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
+        type: 3}
+      propertyPath: m_subTextObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 823909944}
+    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d7bf31f1b6fa9940b24541cc4eb5747,
+        type: 2}
+    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7351989569571157408, guid: 1d7bf31f1b6fa9940b24541cc4eb5747,
+        type: 2}
     - target: {fileID: 3047770345110065253, guid: 72819a2bc26f8d646a672d715d1749ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1248,48 +1316,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
-        type: 3}
-      propertyPath: m_text
-      value: \uf026
-      objectReference: {fileID: 0}
-    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
-        type: 3}
-      propertyPath: m_textInfo.materialCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
-        type: 3}
-      propertyPath: m_subTextObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 823909944}
-    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 1d7bf31f1b6fa9940b24541cc4eb5747,
-        type: 2}
-    - target: {fileID: 3047770345731021790, guid: 72819a2bc26f8d646a672d715d1749ce,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 7351989569571157408, guid: 1d7bf31f1b6fa9940b24541cc4eb5747,
-        type: 2}
     - target: {fileID: 8899492976842464549, guid: 72819a2bc26f8d646a672d715d1749ce,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

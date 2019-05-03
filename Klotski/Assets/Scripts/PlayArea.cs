@@ -22,6 +22,7 @@ public class PlayArea : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        BackgroundMusic.Instance.GetComponent<AudioLowPassFilter>().enabled = true;
     }
 
     private void Start()
