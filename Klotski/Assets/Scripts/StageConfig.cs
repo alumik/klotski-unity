@@ -15,6 +15,7 @@ public class StageConfig : ScriptableObject
 
     [SerializeField] private BlockConfig[] blocks;
     [SerializeField] private string stageName;
+    [SerializeField] private int stageId;
 
     public IEnumerable<BlockConfig> GetBlocks()
     {
@@ -24,5 +25,10 @@ public class StageConfig : ScriptableObject
     public string GetStageName()
     {
         return stageName;
+    }
+    
+    public int GetStageId()
+    {
+        return stageId;
     }
 }
