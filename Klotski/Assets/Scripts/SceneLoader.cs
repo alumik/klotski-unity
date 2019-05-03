@@ -27,18 +27,21 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadStartScene()
     {
+        Store.LastSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(0);
     }
 
     public void LoadNextScene()
     {
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        Store.LastSceneIndex = currentSceneIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
     public void LoadPreviousScene()
     {
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        Store.LastSceneIndex = currentSceneIndex;
         SceneManager.LoadScene(currentSceneIndex - 1);
     }
 }
