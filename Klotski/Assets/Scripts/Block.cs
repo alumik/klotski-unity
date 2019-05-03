@@ -62,12 +62,17 @@ public class Block : MonoBehaviour
             }
         }
 
-        mAudioSource.PlayOneShot(mAudioSource.clip);
+        if (BackgroundMusic.Instance.GetComponent<AudioSource>().isPlaying)
+        {
+            mAudioSource.PlayOneShot(mAudioSource.clip);
+        }
+
         transform.position = minPos;
         if (Vector3.Distance(minPos, mPPos) > 0.1f)
         {
             FindObjectOfType<PlayArea>().AddStep();
         }
+
         mPPos = minPos;
     }
 }
