@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class StageSelector : MonoBehaviour
 {
-    [SerializeField] private StageConfig[] allStages;
+    [SerializeField] private StageConfig[] stageConfigs;
     [SerializeField] private GameObject scrollContent;
     [SerializeField] private GameObject stageItem;
     [SerializeField] private float startingPosition;
@@ -11,18 +11,18 @@ public class StageSelector : MonoBehaviour
     void Start()
     {
         var itemHeight = stageItem.GetComponent<RectTransform>().rect.height;
-        for (var i = 0; i < allStages.Length; i++)
+        for (var i = 0; i < stageConfigs.Length; i++)
         {
             var stageItemObject = Instantiate(stageItem, scrollContent.transform);
-            stageItemObject.name = allStages[i].GetStageName();
-            stageItemObject.GetComponentInChildren<Text>().text = allStages[i].GetStageName();
+            stageItemObject.name = stageConfigs[i].GetStageName();
+            stageItemObject.GetComponentInChildren<Text>().text = stageConfigs[i].GetStageName();
             stageItemObject.GetComponent<RectTransform>().anchoredPosition =
                 new Vector3(0, startingPosition - i * itemHeight, 0);
-            var stageConfig = allStages[i];
+            var stageConfig = stageConfigs[i];
             stageItemObject.GetComponent<Button>().onClick.AddListener(() => { LoadStage(stageConfig); });
         }
 
-        scrollContent.GetComponent<RectTransform>().sizeDelta = new Vector2(0, allStages.Length * itemHeight);
+        scrollContent.GetComponent<RectTransform>().sizeDelta = new Vector2(0, stageConfigs.Length * itemHeight);
     }
 
     private void Update()
