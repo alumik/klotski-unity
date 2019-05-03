@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using FantomLib;
 using TMPro;
 using UnityEngine;
@@ -43,6 +44,16 @@ public class MainMenu : MonoBehaviour
         else
         {
             bgmButton.text = "\uf6a9";
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        Process.GetCurrentProcess().Kill();
+        ProcessThreadCollection pt = Process.GetCurrentProcess().Threads;
+        foreach (ProcessThread p in pt)
+        {
+            p.Dispose();
         }
     }
 }

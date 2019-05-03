@@ -34,4 +34,12 @@ public class WinAnimator : MonoBehaviour
         anim = GameObject.Find("Statistics").GetComponent<Animator>();
         anim.Play("Statistics Hide");
     }
+    
+    private void Update()
+    {
+        if (Input.GetKeyDown("escape"))
+        {
+            Home();
+        }
+    }
 }
