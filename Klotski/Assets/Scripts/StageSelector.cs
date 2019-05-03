@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class StageSelector : MonoBehaviour
@@ -7,6 +8,7 @@ public class StageSelector : MonoBehaviour
     [SerializeField] private GameObject scrollContent;
     [SerializeField] private GameObject stageItem;
     [SerializeField] private float startingPosition;
+    [SerializeField] private TextMeshProUGUI bgmButton;
 
     void Start()
     {
@@ -26,6 +28,15 @@ public class StageSelector : MonoBehaviour
         }
 
         scrollContent.GetComponent<RectTransform>().sizeDelta = new Vector2(0, stageConfigs.Length * itemHeight);
+        
+        if (BackgroundMusic.Instance.GetComponent<AudioSource>().isPlaying)
+        {
+            bgmButton.text = "\uf026";
+        }
+        else
+        {
+            bgmButton.text = "\uf6a9";
+        }
     }
 
     private void Update()
