@@ -5,7 +5,13 @@ public class StageAnimator : MonoBehaviour
     public void Back()
     {
         PlayHideAnimation();
-        FindObjectOfType<SceneLoader>().LoadPreviousSceneDelay((float) 0.75);
+        gameObject.GetComponent<SceneLoader>().LoadPreviousSceneDelay((float) 0.75);
+    }
+
+    public void GameWon()
+    {
+        PlayHideAnimation();
+        gameObject.GetComponent<SceneLoader>().LoadNextSceneDelay((float) 0.75);
     }
 
     private static void PlayHideAnimation()

@@ -17,7 +17,7 @@ public class Block : MonoBehaviour
     {
         if (CompareTag("Main Block") && other.gameObject.CompareTag("Exit"))
         {
-            Debug.Log("Game Won");
+            FindObjectOfType<PlayArea>().GameWon();
         }
     }
 

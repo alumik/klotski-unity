@@ -15,14 +15,14 @@ public class StageSelectorAnimator : MonoBehaviour
     public void Back()
     {
         PlayHideAnimation();
-        FindObjectOfType<SceneLoader>().LoadPreviousSceneDelay((float) 0.5);
+        gameObject.GetComponent<SceneLoader>().LoadPreviousSceneDelay((float) 0.5);
     }
     
     public void LoadStage(StageConfig stageConfig)
     {
         Store.NextStageConfig = stageConfig;
         PlayHideAnimationWithoutList();
-        FindObjectOfType<SceneLoader>().LoadNextSceneDelay((float) 0.5);
+        gameObject.GetComponent<SceneLoader>().LoadNextSceneDelay((float) 0.5);
     }
 
     private static void PlayHideAnimationWithoutList()

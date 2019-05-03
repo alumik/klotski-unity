@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e35dd0ea9336904aab40cec791214f3, type: 3}
   m_Name: "0 \u6D4B\u8BD5\u5173\u5361"
   m_EditorClassIdentifier: 
+  stageId: 0
+  stageName: "\u6D4B\u8BD5\u662F\u5361"
   blocks:
   - type: 3
     x: 0
     y: 0
-  stageName: "\u6D4B\u8BD5\u5173\u5361"
-  stageId: 0

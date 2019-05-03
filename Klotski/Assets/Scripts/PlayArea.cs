@@ -27,7 +27,6 @@ public class PlayArea : MonoBehaviour
     private void Start()
     {
         mStageConfig = Store.NextStageConfig;
-        Store.NextStageConfig = null;
         InitGrid();
         InitBlocks();
         GameObject.Find("Stage Name").GetComponent<Text>().text = mStageConfig.GetStageName();
@@ -36,6 +35,13 @@ public class PlayArea : MonoBehaviour
     private void Update()
     {
         AddTime();
+    }
+
+    public void GameWon()
+    {
+        Store.Time = timer.text;
+        Store.Steps = mSteps;
+        FindObjectOfType<StageAnimator>().GameWon();
     }
 
     public void AddStep()
