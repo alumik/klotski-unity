@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayArea : MonoBehaviour
@@ -13,6 +14,8 @@ public class PlayArea : MonoBehaviour
     private StageConfig mStageConfig;
     private Vector2[,] mGridPos;
     private int mSteps;
+    private float mTime;
+    private bool mStarted;
 
     public static PlayArea instance { get; private set; }
 
@@ -30,8 +33,14 @@ public class PlayArea : MonoBehaviour
         GameObject.Find("Stage Name").GetComponent<Text>().text = mStageConfig.GetStageName();
     }
 
+    private void Update()
+    {
+        AddTime();
+    }
+
     public void AddStep()
     {
+        if (!mStarted) mStarted = true;
         mSteps++;
         stepCounter.text = mSteps + " 步";
     }
@@ -40,6 +49,7 @@ public class PlayArea : MonoBehaviour
     {
         RemoveBlocks();
         ResetSteps();
+        ResetTime();
         InitGrid();
         InitBlocks();
     }
@@ -47,6 +57,28 @@ public class PlayArea : MonoBehaviour
     public Vector2[,] GetGridPos()
     {
         return mGridPos;
+    }
+
+    private void AddTime()
+    {
+        if (mStarted)
+        {
+            mTime += Time.deltaTime;
+            PrintTime();
+        }
+    }
+
+    private void PrintTime()
+    {
+        var timeSpan = TimeSpan.FromSeconds(mTime);
+        timer.text = $"{timeSpan.Hours:D2}:{timeSpan.Minutes:D2}:{timeSpan.Seconds:D2}";
+    }
+
+    private void ResetTime()
+    {
+        mStarted = false;
+        mTime = 0;
+        PrintTime();
     }
 
     private void ResetSteps()
