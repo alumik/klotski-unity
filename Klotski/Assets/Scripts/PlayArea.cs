@@ -68,7 +68,14 @@ public class PlayArea : MonoBehaviour
             var blockObject = Instantiate(
                 blockPrefabs[block.type],
                 new Vector3(pos.x, pos.y, 0),
-                Quaternion.identity);
+                Quaternion.identity,
+                gameObject.transform);
+            var thisScale = blockObject.transform.localScale;
+            var parentScale = blockObject.transform.parent.localScale;
+            blockObject.transform.localScale = new Vector3(
+                thisScale.x / parentScale.x,
+                thisScale.y / parentScale.y,
+                thisScale.z / parentScale.z);
             mGrid[block.x, block.y] = blockObject;
         }
     }
