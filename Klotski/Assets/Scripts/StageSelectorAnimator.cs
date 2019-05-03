@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class StageSelectorAnimator : MonoBehaviour
 {
@@ -21,16 +20,8 @@ public class StageSelectorAnimator : MonoBehaviour
     public void LoadStage(StageConfig stageConfig)
     {
         Store.NextStageConfig = stageConfig;
-        PlayHideAnimationWithoutList();
+        PlayHideAnimation();
         gameObject.GetComponent<SceneLoader>().LoadNextSceneDelay((float) 0.5);
-    }
-
-    private static void PlayHideAnimationWithoutList()
-    {
-        var anim = GameObject.Find("Back Button").GetComponent<Animator>();
-        anim.Play("Back Button Hide");
-        anim = GameObject.Find("Test Stage Button").GetComponent<Animator>();
-        anim.Play("Test Stage Button Hide");
     }
     
     private static void PlayHideAnimation()
@@ -39,6 +30,8 @@ public class StageSelectorAnimator : MonoBehaviour
         anim.Play("Back Button Hide");
         anim = GameObject.Find("Test Stage Button").GetComponent<Animator>();
         anim.Play("Test Stage Button Hide");
+        anim = GameObject.Find("Stage Selector Title").GetComponent<Animator>();
+        anim.Play("Stage Selector Title Hide");
         anim = GameObject.Find("Scroll View").GetComponent<Animator>();
         anim.Play("Scroll View Hide");
     }

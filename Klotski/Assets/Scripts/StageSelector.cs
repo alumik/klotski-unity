@@ -19,7 +19,7 @@ public class StageSelector : MonoBehaviour
             stageItemObject.name = stageConfigs[i].GetStageName();
             stageItemObject.GetComponentInChildren<Text>().text = stageConfigs[i].GetStageName();
             stageItemObject.GetComponent<RectTransform>().anchoredPosition =
-                new Vector3(0, startingPosition - i * itemHeight, 0);
+                new Vector3((float) (i % 2 == 0 ? -232.52 : 232.52), startingPosition - (i / 2) * itemHeight, 0);
             var stageConfig = stageConfigs[i];
             stageItemObject.GetComponent<Button>().onClick.AddListener(() =>
             {
