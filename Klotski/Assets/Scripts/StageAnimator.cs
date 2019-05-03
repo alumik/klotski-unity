@@ -20,5 +20,7 @@ public class StageAnimator : MonoBehaviour
         anim.Play("Stage Name Hide");
         anim = GameObject.Find("Background Panel").GetComponent<Animator>();
         anim.Play("Background Panel Hide");
+        anim = GameObject.Find("Statistics").GetComponent<Animator>();
+        anim.Play("Statistics Hide");
     }
 }

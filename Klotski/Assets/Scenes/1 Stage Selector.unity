@@ -214,7 +214,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1161,8 +1161,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 835.1, y: 1210}
+  m_AnchoredPosition: {x: 0, y: 176.6}
+  m_SizeDelta: {x: 835, y: 1225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1617572898
 MonoBehaviour:
@@ -1251,6 +1251,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 14fe05c4a7ca7a04c9e0633a6296d360, type: 2}
   - {fileID: 11400000, guid: c9614d72c17f9994f8f036eee70b991e, type: 2}
   - {fileID: 11400000, guid: 184acafa7cfe6d544be8271ce0e0127b, type: 2}
+  - {fileID: 11400000, guid: 0e59da0f2c3b3c94c87a415dad14eb3e, type: 2}
   scrollContent: {fileID: 285096283}
   stageItem: {fileID: 7873683264801154273, guid: 9a1dd758e8870c04ea1b5775fcb11ecc,
     type: 3}

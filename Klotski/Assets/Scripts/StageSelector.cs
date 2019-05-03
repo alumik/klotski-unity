@@ -32,7 +32,7 @@ public class StageSelector : MonoBehaviour
     {
         if (Input.GetKeyDown("escape"))
         {
-            FindObjectOfType<SceneLoader>().LoadPreviousScene();
+            FindObjectOfType<StageSelectorAnimator>().Back();
         }
     }
 }

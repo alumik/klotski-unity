@@ -6,10 +6,13 @@ public class PlayArea : MonoBehaviour
     [SerializeField] private Vector2 origin;
     [SerializeField] private float cellSize;
     [SerializeField] private GameObject[] blockPrefabs;
+    [SerializeField] private Text stepCounter;
+    [SerializeField] private Text timer;
 
     private GameObject[,] mGrid;
     private StageConfig mStageConfig;
     private Vector2[,] mGridPos;
+    private int mSteps;
 
     public static PlayArea instance { get; private set; }
 
@@ -27,9 +30,16 @@ public class PlayArea : MonoBehaviour
         GameObject.Find("Stage Name").GetComponent<Text>().text = mStageConfig.GetStageName();
     }
 
+    public void AddStep()
+    {
+        mSteps++;
+        stepCounter.text = mSteps + " 步";
+    }
+
     public void Reset()
     {
         RemoveBlocks();
+        ResetSteps();
         InitGrid();
         InitBlocks();
     }
@@ -37,6 +47,12 @@ public class PlayArea : MonoBehaviour
     public Vector2[,] GetGridPos()
     {
         return mGridPos;
+    }
+
+    private void ResetSteps()
+    {
+        mSteps = 0;
+        stepCounter.text = mSteps + " 步";
     }
 
     private void RemoveBlocks()
