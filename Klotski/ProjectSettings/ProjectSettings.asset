@@ -16,7 +16,7 @@ PlayerSettings:
   productName: "\u534E\u5BB9\u9053"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.9568628, g: 0.2627451, b: 0.21176472, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21176471, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
@@ -274,7 +274,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: f4b872dacac91234a878cc4f680df95c, type: 3}
+      m_Icon: {fileID: 2800000, guid: 0369c278a30547c449cf5d1290a4d067, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
