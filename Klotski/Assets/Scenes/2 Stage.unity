@@ -436,6 +436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playArea: {fileID: 903604079}
   stageName: {fileID: 418675628}
+  exitBar: {fileID: 292326494}
 --- !u!114 &220067917
 MonoBehaviour:
   m_ObjectHideFlags: 0
