@@ -28,11 +28,22 @@ namespace Scene_1
             {
                 var stageItemObject = Instantiate(stageItem, scrollContent.transform);
                 stageItemObject.name = stageConfigs[i].GetStageName();
-                stageItemObject.GetComponentInChildren<Text>().text = stageConfigs[i].GetStageName();
                 stageItemObject.GetComponent<RectTransform>().anchoredPosition =
                     // ReSharper disable once PossibleLossOfFraction
                     new Vector3((float) (i % 2 == 0 ? -232.52 : 235), startingPosition - i / 2 * itemHeight, 0);
                 var stageConfig = stageConfigs[i];
+                var result = Store.Db.GetResult(stageConfig.GetStageId());
+                var stageName = stageConfigs[i].GetStageName();
+                if (result.Finished)
+                {
+                    stageName = "■ " + stageName;
+                }
+                else
+                {
+                    stageName = "□ " + stageName;
+                }
+
+                stageItemObject.GetComponentInChildren<Text>().text = stageName;
                 stageItemObject.GetComponent<Button>().onClick.AddListener(() =>
                 {
                     StageItemSelected(stageItemObject, stageConfig);
@@ -88,6 +99,7 @@ namespace Scene_1
             }
             else
             {
+                unfinished.SetActive(true);
                 unfinished.GetComponent<Text>().text = "未完成";
                 steps.SetActive(false);
                 time.SetActive(false);
