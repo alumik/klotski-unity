@@ -23,6 +23,10 @@ namespace Scene_2
         {
             if (CompareTag("Main Block") && other.gameObject.CompareTag("Exit"))
             {
+                if (Vector2.Distance(mPPos, PlayArea.Instance.GetGridPos()[1, 0]) > 0.1f)
+                {
+                    PlayArea.Instance.AddStep();
+                }
                 PlayArea.Instance.GameWon();
             }
         }
