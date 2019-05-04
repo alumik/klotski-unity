@@ -88,7 +88,7 @@ namespace Scene_1
             }
             else
             {
-                unfinished.SetActive(true);
+                unfinished.GetComponent<Text>().text = "未完成";
                 steps.SetActive(false);
                 time.SetActive(false);
             }
