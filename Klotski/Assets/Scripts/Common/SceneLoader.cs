@@ -46,7 +46,7 @@ namespace Common
             Store.LastSceneIndex = currentSceneIndex;
             SceneManager.LoadScene(currentSceneIndex + 1);
         }
-        
+
         public void LoadScene(int sceneIndex)
         {
             Store.LastSceneIndex = SceneManager.GetActiveScene().buildIndex;

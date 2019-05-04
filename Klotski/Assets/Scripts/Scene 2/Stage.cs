@@ -8,6 +8,7 @@ namespace Scene_2
     {
         [SerializeField] private PlayArea playArea;
         [SerializeField] private Text stageName;
+        [SerializeField] private GameObject exitBar;
 
         private void Start()
         {
@@ -15,6 +16,8 @@ namespace Scene_2
             {
                 Camera.main.backgroundColor = Store.CurrentColor;
             }
+
+            exitBar.GetComponent<SpriteRenderer>().color = Store.CurrentColor;
             stageName.text = Store.NextStageConfig.GetStageName();
         }
 

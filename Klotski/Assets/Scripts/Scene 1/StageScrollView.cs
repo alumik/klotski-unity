@@ -1,4 +1,5 @@
-﻿using Common;
+﻿using System;
+using Common;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -72,18 +73,18 @@ namespace Scene_1
 
             playButton.GetComponentInChildren<TextMeshProUGUI>().text = "\uf04b";
             playButton.GetComponent<Button>().onClick.RemoveAllListeners();
-            playButton.GetComponent<Button>().onClick.AddListener(() =>
-            {
-                animator.LoadStage(stageConfig);
-            });
+            playButton.GetComponent<Button>().onClick.AddListener(() => { animator.LoadStage(stageConfig); });
 
-            if (true)
+            var result = Store.Db.GetResult(stageConfig.GetStageId());
+            if (result.Finished)
             {
                 unfinished.SetActive(false);
                 steps.SetActive(true);
                 time.SetActive(true);
-                steps.transform.GetChild(0).GetComponent<Text>().text = "68";
-                time.transform.GetChild(0).GetComponent<Text>().text = "00:35:00";
+                steps.transform.GetChild(0).GetComponent<Text>().text = result.BestSteps.ToString();
+                var timeSpan = TimeSpan.FromSeconds(result.BestTime);
+                var timeText = $"{timeSpan.Hours:D2}:{timeSpan.Minutes:D2}:{timeSpan.Seconds:D2}";
+                time.transform.GetChild(0).GetComponent<Text>().text = timeText;
             }
             else
             {

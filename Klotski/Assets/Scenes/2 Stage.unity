@@ -1960,7 +1960,8 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2812300024073937930, guid: f79dddb2acae5a944b0adab38361c50c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f79dddb2acae5a944b0adab38361c50c, type: 3}
 --- !u!224 &1920662829 stripped
 RectTransform:

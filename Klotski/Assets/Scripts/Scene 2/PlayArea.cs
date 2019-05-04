@@ -42,7 +42,7 @@ namespace Scene_2
 
         public void GameWon()
         {
-            Store.Time = timer.text;
+            Store.Time = (int) mTime;
             Store.Steps = mSteps;
             animator.GameWon();
         }

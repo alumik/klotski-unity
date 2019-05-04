@@ -6,12 +6,13 @@ namespace Common
     {
         public static StageConfig NextStageConfig;
         public static int LastSceneIndex;
-        public static string Time;
+        public static int Time;
         public static int Steps;
         public static float LastScrollPosition;
         public static Color CurrentColor = new Color32(0xF4, 0x43, 0x36, 0xFF);
         public static int CurrentColorIndex = 0;
-        
+        public static readonly Database Db = new Database();
+
         public const int SceneMainMenu = 0;
         public const int SceneLevelSelector = 1;
         public const int SceneGameInfo = 4;
