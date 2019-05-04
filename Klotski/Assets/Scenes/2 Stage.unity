@@ -366,7 +366,7 @@ PrefabInstance:
     - target: {fileID: 3924149795300541591, guid: 3c52cc066156be341b7baeff85a95469,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000061035156
+      value: -0.00012207031
       objectReference: {fileID: 0}
     - target: {fileID: 3924149795300541591, guid: 3c52cc066156be341b7baeff85a95469,
         type: 3}
@@ -1042,6 +1042,7 @@ GameObject:
   m_Component:
   - component: {fileID: 903604078}
   - component: {fileID: 903604077}
+  - component: {fileID: 903604081}
   - component: {fileID: 903604079}
   - component: {fileID: 903604080}
   m_Layer: 0
@@ -1108,7 +1109,7 @@ Transform:
   m_GameObject: {fileID: 903604076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 10, y: 12.5, z: 1}
+  m_LocalScale: {x: 8.8, y: 11, z: 1}
   m_Children:
   - {fileID: 400438943}
   - {fileID: 1796236862}
@@ -1128,8 +1129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1e28616df9836f4786f1db5934803e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {x: -5, y: -6.25}
-  cellSize: 2.5
+  origin: {x: -4.4, y: -5.5}
+  cellSize: 2.2
   blockPrefabs:
   - {fileID: 7784290455239993549, guid: 56dd55288859d694a966afa32e73d39e, type: 3}
   - {fileID: 2986276308299396893, guid: 64d53e53cd9adad4ea908b7e3f9deb11, type: 3}
@@ -1157,6 +1158,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &903604081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903604076}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa65bab7ffe55d4caded89ce024521e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1052047345}
+  objectScale: 0.08
 --- !u!1 &928934594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,7 +1209,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -163.09998}
+  m_AnchoredPosition: {x: 0, y: -124}
   m_SizeDelta: {x: 662.6, y: 326.09998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &928934596
@@ -1253,6 +1268,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!20 &1052047345 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2601721963078168565, guid: 32787373f13c6924fa225abf6d37194f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1340312896}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1153092340
 GameObject:
   m_ObjectHideFlags: 0
