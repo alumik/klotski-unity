@@ -10,14 +10,14 @@ namespace Scene_3
         public void Replay()
         {
             PlayHideAnimation();
-            GetComponent<SceneLoader>().LoadPreviousSceneDelay((float) 0.5);
+            GetComponent<SceneLoader>().LoadPreviousSceneDelay((float) 0.33);
         }
 
         public void Home()
         {
             PlayHideAnimation();
             Store.NextStageConfig = null;
-            GetComponent<SceneLoader>().LoadStartSceneDelay((float) 0.5);
+            GetComponent<SceneLoader>().LoadStartSceneDelay((float) 0.33);
         }
 
         private void PlayHideAnimation()

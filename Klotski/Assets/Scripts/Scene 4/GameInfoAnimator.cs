@@ -10,7 +10,7 @@ namespace Scene_4
         public void Back()
         {
             PlayHideAnimation();
-            GetComponent<SceneLoader>().LoadSceneDelay(Store.SceneLevelSelector, (float) 0.5);
+            GetComponent<SceneLoader>().LoadSceneDelay(Store.SceneLevelSelector, (float) 0.33);
         }
 
         private void PlayHideAnimation()

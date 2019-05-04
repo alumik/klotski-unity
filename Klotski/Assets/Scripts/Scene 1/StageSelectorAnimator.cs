@@ -18,20 +18,20 @@ namespace Scene_1
         public void Back()
         {
             PlayHideAnimation();
-            GetComponent<SceneLoader>().LoadPreviousSceneDelay((float) 0.5);
+            GetComponent<SceneLoader>().LoadPreviousSceneDelay((float) 0.33);
         }
 
         public void LoadStage(StageConfig stageConfig)
         {
             Store.NextStageConfig = stageConfig;
             PlayHideAnimation();
-            GetComponent<SceneLoader>().LoadNextSceneDelay((float) 0.5);
+            GetComponent<SceneLoader>().LoadNextSceneDelay((float) 0.33);
         }
 
         public void GameInfo()
         {
             PlayHideAnimation();
-            GetComponent<SceneLoader>().LoadSceneDelay(Store.SceneGameInfo, (float) 0.5);
+            GetComponent<SceneLoader>().LoadSceneDelay(Store.SceneGameInfo, (float) 0.33);
         }
 
         private void PlayHideAnimation()
