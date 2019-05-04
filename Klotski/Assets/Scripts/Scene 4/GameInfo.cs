@@ -17,5 +17,13 @@ namespace Scene_4
             }
             versionStringText.text = versionString;
         }
+        
+        private void Update()
+        {
+            if (Input.GetKeyDown("escape"))
+            {
+                GetComponent<GameInfoAnimator>().Back();
+            }
+        }
     }
 }
