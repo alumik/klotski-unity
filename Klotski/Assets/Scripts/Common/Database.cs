@@ -23,6 +23,16 @@ namespace Common
             dbCmd.CommandText =
                 "create table if not exists stage_progress (id integer primary key, best_steps integer, best_time integer)";
             dbCmd.ExecuteNonQuery();
+            dbCmd.CommandText =
+                "create table if not exists configs (id integer primary key, value integer)";
+            dbCmd.ExecuteNonQuery();
+            dbCmd.CommandText = "SELECT count(*) FROM configs";
+            var count = Convert.ToInt32(dbCmd.ExecuteScalar());
+            if (count == 0)
+            {
+                dbCmd.CommandText = "INSERT INTO configs VALUES (1, 0); INSERT INTO configs VALUES (2, 1)";
+                dbCmd.ExecuteNonQuery();
+            }
             mCon.Close();
         }
 
@@ -92,6 +102,25 @@ namespace Common
 
             mCon.Close();
             return result;
+        }
+
+        public int GetConfig(int id)
+        {
+            mCon.Open();
+            var dbCmd = mCon.CreateCommand();
+            dbCmd.CommandText = "SELECT value FROM configs WHERE id=" + id;
+            var result =  Convert.ToInt32(dbCmd.ExecuteScalar());
+            mCon.Close();
+            return result;
+        }
+        
+        public void SetConfig(int id, int value)
+        {
+            mCon.Open();
+            var dbCmd = mCon.CreateCommand();
+            dbCmd.CommandText = "UPDATE configs SET value=" + value + " WHERE id=" + id;
+            dbCmd.ExecuteNonQuery();
+            mCon.Close();
         }
     }
 }

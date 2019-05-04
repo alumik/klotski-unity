@@ -17,6 +17,9 @@ namespace Common
         public const int SceneLevelSelector = 1;
         public const int SceneGameInfo = 4;
 
+        public const int ConfigColor = 1;
+        public const int ConfigBgm = 2;
+
         public static readonly byte[,] Colors =
         {
             {0xf4, 0x43, 0x36},

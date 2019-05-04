@@ -12,7 +12,9 @@ namespace Scene_0
 
         private void Start()
         {
+            Store.CurrentColorIndex = Store.Db.GetConfig(Store.ConfigColor);
             ApplyColor();
+            SetBackgroundMusic();
             ChangeBgmButton();
         }
 
@@ -30,10 +32,12 @@ namespace Scene_0
             if (audioSource.isPlaying)
             {
                 audioSource.Pause();
+                Store.Db.SetConfig(Store.ConfigBgm, 0);
             }
             else
             {
                 audioSource.UnPause();
+                Store.Db.SetConfig(Store.ConfigBgm, 1);
             }
 
             ChangeBgmButton();
@@ -47,13 +51,14 @@ namespace Scene_0
                 Store.CurrentColorIndex = 0;
             }
 
-            Store.CurrentColor = new Color32(Store.Colors[Store.CurrentColorIndex, 0],
-                Store.Colors[Store.CurrentColorIndex, 1], Store.Colors[Store.CurrentColorIndex, 2], 0xFF);
             ApplyColor();
+            Store.Db.SetConfig(Store.ConfigColor, Store.CurrentColorIndex);
         }
 
         private static void ApplyColor()
         {
+            Store.CurrentColor = new Color32(Store.Colors[Store.CurrentColorIndex, 0],
+                Store.Colors[Store.CurrentColorIndex, 1], Store.Colors[Store.CurrentColorIndex, 2], 0xFF);
             if (Camera.main != null)
             {
                 Camera.main.backgroundColor = Store.CurrentColor;
@@ -63,6 +68,14 @@ namespace Scene_0
         private void ChangeBgmButton()
         {
             bgmButton.text = BackgroundMusic.Instance.GetComponent<AudioSource>().isPlaying ? "\uf026" : "\uf6a9";
+        }
+
+        private void SetBackgroundMusic()
+        {
+            if (Store.Db.GetConfig(Store.ConfigBgm) == 0)
+            {
+                BackgroundMusic.Instance.GetComponent<AudioSource>().Pause();
+            }
         }
     }
 }
