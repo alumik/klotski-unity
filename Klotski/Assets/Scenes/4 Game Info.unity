@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e65e16f880aafb4cb7dc6c2ff92eed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  versionString: v1.1
+  versionString: v1.2
   versionStringText: {fileID: 1591992077}
 --- !u!1001 &702616449
 PrefabInstance:
@@ -611,7 +611,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1310519598}
   m_HandleRect: {fileID: 1310519597}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.99999976
   m_Size: 0.7416903
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1219,7 +1219,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1670,7 +1670,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
