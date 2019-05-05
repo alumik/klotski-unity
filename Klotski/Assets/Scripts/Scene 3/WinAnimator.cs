@@ -20,6 +20,12 @@ namespace Scene_3
             GetComponent<SceneLoader>().LoadStartSceneDelay((float) 0.33);
         }
 
+        public void Next()
+        {
+            PlayHideAnimation();
+            GetComponent<SceneLoader>().LoadSceneDelay(Store.SceneLevelSelector, (float) 0.33);
+        }
+
         private void PlayHideAnimation()
         {
             foreach (var animator in animators)

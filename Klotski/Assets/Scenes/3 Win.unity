@@ -1360,7 +1360,7 @@ PrefabInstance:
     - target: {fileID: 1843917390652879921, guid: 22e0df7e3400dc2498b928cd37b66c7d,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1843917390652879921, guid: 22e0df7e3400dc2498b928cd37b66c7d,
         type: 3}
@@ -1370,7 +1370,7 @@ PrefabInstance:
     - target: {fileID: 1843917390652879921, guid: 22e0df7e3400dc2498b928cd37b66c7d,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1843917390652879921, guid: 22e0df7e3400dc2498b928cd37b66c7d,
         type: 3}
@@ -1386,6 +1386,66 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843917390652879921, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_text
+      value: \uf105
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843917390652879921, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843917390652879921, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_textInfo.materialCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 518766698488412188, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 518766698488412188, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 518766698488412188, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 518766698488412188, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 597630786}
+    - target: {fileID: 518766698488412188, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Next
+      objectReference: {fileID: 0}
+    - target: {fileID: 518766698488412188, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435908607521850611, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_Name
+      value: TMP SubMeshUI [fa-solid-900 Atlas Material + LiberationSans SDF Atlas]
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435908607521850621, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8435908607521850621, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22e0df7e3400dc2498b928cd37b66c7d, type: 3}
