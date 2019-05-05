@@ -12,6 +12,7 @@ namespace Common
         public static Color CurrentColor = new Color32(0xF4, 0x43, 0x36, 0xFF);
         public static int CurrentColorIndex = 0;
         public static readonly Database Db = new Database();
+        public static int Difficulty = 0;
 
         public const int SceneMainMenu = 0;
         public const int SceneLevelSelector = 1;

@@ -10,38 +10,40 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e35dd0ea9336904aab40cec791214f3, type: 3}
-  m_Name: "4 \u9F50\u5934\u5E76\u8FDB"
+  m_Name: "18 \u5C06\u62E5\u66F9\u8425"
   m_EditorClassIdentifier: 
-  stageId: 4
-  stageName: "\u9F50\u5934\u5E76\u8FDB"
+  difficulty: 2
+  stageId: 18
+  stageName: "\u5C06\u62E5\u66F9\u8425"
+  minSteps: 0
   blocks:
   - type: 0
     x: 0
-    y: 2
-  - type: 0
-    x: 1
-    y: 2
+    y: 1
   - type: 0
     x: 2
-    y: 2
+    y: 0
   - type: 0
     x: 3
+    y: 0
+  - type: 0
+    x: 3
+    y: 1
+  - type: 1
+    x: 0
     y: 2
   - type: 1
-    x: 0
-    y: 0
-  - type: 1
-    x: 0
-    y: 3
-  - type: 1
-    x: 3
-    y: 0
-  - type: 1
-    x: 3
-    y: 3
-  - type: 2
     x: 1
     y: 1
+  - type: 1
+    x: 2
+    y: 1
+  - type: 1
+    x: 3
+    y: 2
+  - type: 2
+    x: 0
+    y: 0
   - type: 3
     x: 1
     y: 3

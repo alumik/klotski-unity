@@ -15,13 +15,20 @@ namespace Common
             [SerializeField] public int y;
         }
 
+        [SerializeField] private int difficulty;
         [SerializeField] private int stageId;
         [SerializeField] private string stageName;
+        [SerializeField] private int minSteps;
         [SerializeField] private BlockConfig[] blocks;
 
-        public IEnumerable<BlockConfig> GetBlocks()
+        public int GetDifficulty()
         {
-            return blocks;
+            return difficulty;
+        }
+        
+        public int GetStageId()
+        {
+            return stageId;
         }
 
         public string GetStageName()
@@ -29,9 +36,14 @@ namespace Common
             return stageName;
         }
 
-        public int GetStageId()
+        public int GetMinSteps()
         {
-            return stageId;
+            return minSteps;
+        }
+        
+        public IEnumerable<BlockConfig> GetBlocks()
+        {
+            return blocks;
         }
     }
 }

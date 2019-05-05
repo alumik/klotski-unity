@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e35dd0ea9336904aab40cec791214f3, type: 3}
   m_Name: "24 \u6C34\u6CC4\u4E0D\u901A"
   m_EditorClassIdentifier: 
+  difficulty: 2
   stageId: 24
   stageName: "\u6C34\u6CC4\u4E0D\u901A"
+  minSteps: 0
   blocks:
   - type: 0
     x: 0

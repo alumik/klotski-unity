@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Common;
 using TMPro;
 using UnityEngine;
@@ -8,33 +9,104 @@ namespace Scene_1
 {
     public class StageScrollView : MonoBehaviour
     {
-        [SerializeField] private StageConfig[] stageConfigs;
-        [SerializeField] private GameObject scrollContent;
+        [Header("Stage Configs")]
+        [SerializeField]private StageConfig[] tutorialStages;
+        [SerializeField] private StageConfig[] easyStages;
+        [SerializeField] private StageConfig[] hardStages;
+
+        [Header("Prefabs")]
         [SerializeField] private GameObject stageItem;
         [SerializeField] private GameObject selectIndicator;
+
+        [Header("Parameters")]
         [SerializeField] private float startingPosition;
+        [SerializeField] private int difficultyNumber;
+        [SerializeField] private string[] difficultyString;
+
+        [Header("Interface")]
+        [SerializeField] private GameObject scrollContent;
         [SerializeField] private StageSelectorAnimator animator;
         [SerializeField] private GameObject playButton;
         [SerializeField] private GameObject steps;
         [SerializeField] private GameObject time;
         [SerializeField] private GameObject unfinished;
+        [SerializeField] private Text changeDifficultyButton;
 
         private GameObject mCurrentSelectIndicator;
+        private StageConfig[] mStageConfigs;
+        private List<GameObject> mStageItems;
+        private int mDifficulty;
 
         private void Start()
         {
-            var itemHeight = stageItem.GetComponent<RectTransform>().rect.height;
-            for (var i = 0; i < stageConfigs.Length; i++)
+            mStageConfigs = tutorialStages;
+            if (Store.LastSceneIndex != Store.SceneMainMenu)
             {
+                RestoreDifficulty();
+            }
+            GenerateList();
+            RestoreScrollPosition();
+        }
+
+        private void OnDestroy()
+        {
+            Store.LastScrollPosition = scrollContent.GetComponent<RectTransform>().localPosition.y;
+            Store.Difficulty = mDifficulty;
+        }
+
+        public void SwitchDifficulty()
+        {
+            mDifficulty++;
+            if (mDifficulty >= difficultyNumber)
+            {
+                mDifficulty = 0;
+            }
+            SetDifficulty(mDifficulty);
+            DisposeList();
+            GenerateList();
+        }
+        
+        public void PlayRandom()
+        {
+            animator.LoadStage(mStageConfigs[new System.Random().Next(mStageConfigs.Length)]);
+        }
+
+        private void DisposeList()
+        {
+            if (mCurrentSelectIndicator != null)
+            {
+                Destroy(mCurrentSelectIndicator);
+            }
+            foreach (var stageItemObject in mStageItems)
+            {
+                Destroy(stageItemObject);
+            }
+            playButton.GetComponentInChildren<TextMeshProUGUI>().text = "\uf074";
+            unfinished.GetComponent<Text>().text = "随机游戏";
+            playButton.GetComponent<Button>().onClick.RemoveAllListeners();
+            playButton.GetComponent<Button>().onClick.AddListener(PlayRandom);
+            var pos = scrollContent.GetComponent<RectTransform>().localPosition;
+            scrollContent.GetComponent<RectTransform>().localPosition =
+                new Vector3(pos.x, 0, pos.z);
+        }
+        
+        private void GenerateList()
+        {
+            mStageItems = new List<GameObject>();
+            var itemHeight = stageItem.GetComponent<RectTransform>().rect.height;
+            for (var i = 0; i < mStageConfigs.Length; i++)
+            {
+                var stageConfig = mStageConfigs[i];
                 var stageItemObject = Instantiate(stageItem, scrollContent.transform);
-                stageItemObject.name = stageConfigs[i].GetStageName();
-                stageItemObject.GetComponent<RectTransform>().anchoredPosition =
+                stageItemObject.name = stageConfig.GetStageName();
+                stageItemObject.GetComponent<RectTransform>().anchoredPosition = new Vector3(
+                    (float) (i % 2 == 0 ? -232.52 : 235),
                     // ReSharper disable once PossibleLossOfFraction
-                    new Vector3((float) (i % 2 == 0 ? -232.52 : 235), startingPosition - i / 2 * itemHeight, 0);
-                var stageConfig = stageConfigs[i];
-                var result = Store.Db.GetResult(stageConfig.GetStageId());
-                var stageName = stageConfigs[i].GetStageName();
-                if (result.Finished)
+                    startingPosition - i / 2 * itemHeight,
+                    0);
+                var finished = Store.Db.GetFinished(stageConfig.GetStageId());
+                var stageName = stageItemObject.name;
+                if (finished)
                 {
                     stageName = "■ " + stageName;
                 }
@@ -48,28 +120,47 @@ namespace Scene_1
                 {
                     StageItemSelected(stageItemObject, stageConfig);
                 });
+                mStageItems.Add(stageItemObject);
             }
 
             scrollContent.GetComponent<RectTransform>().sizeDelta =
-                new Vector2(0, Mathf.Ceil(stageConfigs.Length / 2.0f) * itemHeight);
+                new Vector2(0, Mathf.Ceil(mStageConfigs.Length / 2.0f) * itemHeight);
+        }
+        
+        private void SetDifficulty(int difficulty)
+        {
+            changeDifficultyButton.text = difficultyString[mDifficulty];
+            switch (difficulty)
+            {
+                case 0:
+                    mStageConfigs = tutorialStages;
+                    break;
+                case 1:
+                    mStageConfigs = easyStages;
+                    break;
+                case 2:
+                    mStageConfigs = hardStages;
+                    break;
+                default:
+                    mStageConfigs = tutorialStages;
+                    break;
+            }
+        }
 
+        private void RestoreDifficulty()
+        {
+            mDifficulty = Store.Difficulty;
+            SetDifficulty(mDifficulty);
+        }
 
+        private void RestoreScrollPosition()
+        {
             if (Store.LastSceneIndex != Store.SceneMainMenu)
             {
                 var pos = scrollContent.GetComponent<RectTransform>().localPosition;
                 scrollContent.GetComponent<RectTransform>().localPosition =
                     new Vector3(pos.x, Store.LastScrollPosition, pos.z);
             }
-        }
-
-        private void OnDestroy()
-        {
-            Store.LastScrollPosition = scrollContent.GetComponent<RectTransform>().localPosition.y;
-        }
-
-        public void RandomGame()
-        {
-            animator.LoadStage(stageConfigs[new System.Random().Next(stageConfigs.Length)]);
         }
 
         private void StageItemSelected(GameObject stageItemObject, StageConfig stageConfig)
