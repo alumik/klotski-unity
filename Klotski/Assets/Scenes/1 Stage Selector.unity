@@ -1252,8 +1252,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialStages:
   - {fileID: 11400000, guid: ff507b269a7cb4f4b8e8ad79c91c0870, type: 2}
+  - {fileID: 11400000, guid: 0fa4628fc87398b46b7e6e7883a7dcec, type: 2}
+  - {fileID: 11400000, guid: 104cb78fc485780429de029516c8f3be, type: 2}
+  - {fileID: 11400000, guid: d25819c51d4989b41be2e1a769b5c7cd, type: 2}
+  - {fileID: 11400000, guid: f0a279bd58c0f7344ad0f00ef8a5112c, type: 2}
+  - {fileID: 11400000, guid: e34e6bd144847b042b5e39831403ab55, type: 2}
+  - {fileID: 11400000, guid: 889de0cf65b72f5469b6a5dd4957f169, type: 2}
+  - {fileID: 11400000, guid: 2c9731e84972f4e4a8e371aba56b06b9, type: 2}
+  - {fileID: 11400000, guid: b943af242e2812d47913a222ba3dcd6a, type: 2}
+  - {fileID: 11400000, guid: f01704b98eacbbb43b79be0d373b88ae, type: 2}
+  - {fileID: 11400000, guid: 01ca8be8d4dcdd94299432479a7959d0, type: 2}
+  - {fileID: 11400000, guid: a43bb7e613c32ab40b71e7a0aa93dd6d, type: 2}
+  - {fileID: 11400000, guid: 7417d72616a8a514a94a2929e0754e26, type: 2}
+  - {fileID: 11400000, guid: 75baeac50b6e8f54d8049b1d1cf8b31d, type: 2}
   - {fileID: 11400000, guid: 6269236e52a3ea44aaaeeddf5a4d8e1b, type: 2}
-  easyStages: []
+  easyStages:
+  - {fileID: 11400000, guid: a5dd135cfca9f1e42945b9a5b733ea19, type: 2}
+  - {fileID: 11400000, guid: 6f1d62e2df2afc748b3acd7463a2ba44, type: 2}
+  - {fileID: 11400000, guid: b462f8c69af92cc4faafd3603e638507, type: 2}
+  - {fileID: 11400000, guid: 684c96b04069cc041983bd7d35f172bc, type: 2}
+  - {fileID: 11400000, guid: 975f2d2e1fa449147b2d504b97e1ba7c, type: 2}
+  - {fileID: 11400000, guid: e267fc61bd7c60540ad48caba5fe0b5d, type: 2}
+  - {fileID: 11400000, guid: e08d71034dec33b479de0a664a4ac5ff, type: 2}
+  - {fileID: 11400000, guid: 963e1767be6b36145a053d2d1e455930, type: 2}
+  - {fileID: 11400000, guid: 215452336d3cd584e9b02b0ec9811424, type: 2}
+  - {fileID: 11400000, guid: 247ff8e1ecbe32e4bbbaf1e79e7114bb, type: 2}
+  - {fileID: 11400000, guid: 0c3606fad9c9dcd41a25305844a3d0cf, type: 2}
+  - {fileID: 11400000, guid: 2977e8a7d68b64d42a528f0d05126a39, type: 2}
   hardStages:
   - {fileID: 11400000, guid: 3f6b43a084d5b0b44adbfdcc6d106877, type: 2}
   - {fileID: 11400000, guid: 6d41afa88d7f8164f8f4a20c7acb96e6, type: 2}
