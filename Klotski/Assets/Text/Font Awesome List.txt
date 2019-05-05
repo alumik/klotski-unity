@@ -1,0 +1,14 @@
+Info
+Color
+Play
+Bgm ON
+Bgm OFF
+Back
+Random
+Replay
+Home
+Crown
+
+F129,F1FC,F04B,F026,F6A9,F104,F074,F0E2,F015,F521
+
+
