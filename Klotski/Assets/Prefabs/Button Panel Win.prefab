@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 1843917389125828501}
   - component: {fileID: 1843917389125828502}
   m_Layer: 5
-  m_Name: Win Panel 1
+  m_Name: Button Panel Win
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -446,8 +446,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: \uf0e2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5c2c68da35ae4534bb7acf4e01b8117d, type: 2}
-  m_sharedMaterial: {fileID: 3985835472134420078, guid: 5c2c68da35ae4534bb7acf4e01b8117d,
+  m_fontAsset: {fileID: 11400000, guid: 1d7bf31f1b6fa9940b24541cc4eb5747, type: 2}
+  m_sharedMaterial: {fileID: 7351989569571157408, guid: 1d7bf31f1b6fa9940b24541cc4eb5747,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -605,8 +605,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: \uf015
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5c2c68da35ae4534bb7acf4e01b8117d, type: 2}
-  m_sharedMaterial: {fileID: 3985835472134420078, guid: 5c2c68da35ae4534bb7acf4e01b8117d,
+  m_fontAsset: {fileID: 11400000, guid: 1d7bf31f1b6fa9940b24541cc4eb5747, type: 2}
+  m_sharedMaterial: {fileID: 7351989569571157408, guid: 1d7bf31f1b6fa9940b24541cc4eb5747,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

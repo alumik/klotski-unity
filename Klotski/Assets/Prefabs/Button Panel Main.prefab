@@ -302,6 +302,18 @@ PrefabInstance:
       propertyPath: m_textInfo.materialCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1843917389354751848, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d7bf31f1b6fa9940b24541cc4eb5747,
+        type: 2}
+    - target: {fileID: 1843917389354751848, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7351989569571157408, guid: 1d7bf31f1b6fa9940b24541cc4eb5747,
+        type: 2}
     - target: {fileID: 1843917389191430996, guid: 22e0df7e3400dc2498b928cd37b66c7d,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -340,12 +352,29 @@ PrefabInstance:
     - target: {fileID: 1843917389191430996, guid: 22e0df7e3400dc2498b928cd37b66c7d,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1843917389191430996, guid: 22e0df7e3400dc2498b928cd37b66c7d,
         type: 3}
       propertyPath: m_textInfo.materialCount
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843917389191430996, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 1d7bf31f1b6fa9940b24541cc4eb5747,
+        type: 2}
+    - target: {fileID: 1843917389191430996, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7351989569571157408, guid: 1d7bf31f1b6fa9940b24541cc4eb5747,
+        type: 2}
+    - target: {fileID: 1843917390126783398, guid: 22e0df7e3400dc2498b928cd37b66c7d,
+        type: 3}
+      propertyPath: m_Name
+      value: TMP SubMeshUI [fa-solid-900 Atlas Material + LiberationSans SDF Atlas]
       objectReference: {fileID: 0}
     - target: {fileID: 1843917390652879921, guid: 22e0df7e3400dc2498b928cd37b66c7d,
         type: 3}

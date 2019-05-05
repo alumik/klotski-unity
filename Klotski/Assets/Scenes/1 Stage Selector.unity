@@ -190,7 +190,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 78487964ad38e2b41a85037c8997440c, type: 3}
+    m_Font: {fileID: 12800000, guid: 60757dcad7e2d5d4fbb1f1a22a925ba3, type: 3}
     m_FontSize: 64
     m_FontStyle: 0
     m_BestFit: 0
@@ -718,7 +718,7 @@ PrefabInstance:
     - target: {fileID: 3924149795300541591, guid: 3c52cc066156be341b7baeff85a95469,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3924149795300541591, guid: 3c52cc066156be341b7baeff85a95469,
         type: 3}
@@ -828,7 +828,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ede4f855e61bc46935824f775186f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgmButton: {fileID: 0}
 --- !u!95 &1048542085 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4111740620326514964, guid: 5264e590ec5b6e44c8f46b96cbd2b65c,
@@ -1664,8 +1663,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: \uf074
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5c2c68da35ae4534bb7acf4e01b8117d, type: 2}
-  m_sharedMaterial: {fileID: 3985835472134420078, guid: 5c2c68da35ae4534bb7acf4e01b8117d,
+  m_fontAsset: {fileID: 11400000, guid: 1d7bf31f1b6fa9940b24541cc4eb5747, type: 2}
+  m_sharedMaterial: {fileID: 7351989569571157408, guid: 1d7bf31f1b6fa9940b24541cc4eb5747,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1984,6 +1983,18 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1173692635146620864, guid: 58f8ef0ec64645a45be20cda6ac21de6,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 60757dcad7e2d5d4fbb1f1a22a925ba3,
+        type: 3}
+    - target: {fileID: 1173692635903301401, guid: 58f8ef0ec64645a45be20cda6ac21de6,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a23bb223b5afbbe4287c8becafa26c93,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58f8ef0ec64645a45be20cda6ac21de6, type: 3}
 --- !u!1001 &1331682236671281362
@@ -1997,6 +2008,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Steps Title
+      objectReference: {fileID: 0}
+    - target: {fileID: 1331682236506160764, guid: 55e392b10750b4643ac0a5e22c4f2f3c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1331682236506160765, guid: 55e392b10750b4643ac0a5e22c4f2f3c,
         type: 3}
@@ -2103,6 +2119,18 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1331682236506160738, guid: 55e392b10750b4643ac0a5e22c4f2f3c,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 60757dcad7e2d5d4fbb1f1a22a925ba3,
+        type: 3}
+    - target: {fileID: 1331682237368744159, guid: 55e392b10750b4643ac0a5e22c4f2f3c,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: a23bb223b5afbbe4287c8becafa26c93,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e392b10750b4643ac0a5e22c4f2f3c, type: 3}
 --- !u!1001 &2601721963702201117
