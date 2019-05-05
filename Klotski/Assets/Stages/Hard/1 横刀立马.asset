@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e35dd0ea9336904aab40cec791214f3, type: 3}
   m_Name: "1 \u6A2A\u5200\u7ACB\u9A6C"
   m_EditorClassIdentifier: 
+  stageId: 1
+  stageName: "\u6A2A\u5200\u7ACB\u9A6C"
   blocks:
   - type: 0
     x: 0
@@ -43,5 +45,3 @@ MonoBehaviour:
   - type: 3
     x: 1
     y: 3
-  stageName: "\u6A2A\u5200\u7ACB\u9A6C"
-  stageId: 1
