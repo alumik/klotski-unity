@@ -29,7 +29,7 @@ namespace MaterialUI
             if (assetPath.Contains("GeneratedShadows"))
             {
                 TextureImporter importer = assetImporter as TextureImporter;
-                importer.textureType = TextureImporterType.Advanced;
+                importer.textureType = TextureImporterType.Default;
                 importer.npotScale = TextureImporterNPOTScale.None;
                 importer.generateCubemap = TextureImporterGenerateCubemap.None;
                 importer.spriteImportMode = SpriteImportMode.Single;
@@ -46,7 +46,7 @@ namespace MaterialUI
                 }
                 else
                 {
-                    importer.textureType = TextureImporterType.Advanced;
+                    importer.textureType = TextureImporterType.Default;
                 }
             }
         }

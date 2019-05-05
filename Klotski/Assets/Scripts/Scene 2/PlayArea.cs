@@ -49,11 +49,15 @@ namespace Scene_2
 
         public void AddStep()
         {
-            if (!mStarted) mStarted = true;
             mSteps++;
             stepCounter.text = mSteps + " 步";
         }
 
+        public void StartTime()
+        {
+            mStarted = true;
+        }
+        
         public void ResetGame()
         {
             RemoveBlocks();

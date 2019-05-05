@@ -35,6 +35,7 @@ namespace Scene_2
         {
             if (Camera.main != null)
             {
+                PlayArea.Instance.StartTime();
                 var mouseScreenPos = Input.mousePosition;
                 mouseScreenPos.z = 10f;
                 mPMousePos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
