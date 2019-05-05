@@ -1,23 +1,22 @@
 ﻿using Common;
 using UnityEngine;
 
-namespace Scene_1
+namespace Scene_0
 {
-    public class StageSelectorAnimator : MonoBehaviour
+    public class MainMenuAnimator : MonoBehaviour
     {
         [SerializeField] private Animator[] animators;
 
-        public void Back()
+        public void Next()
         {
-            PlayHideAnimation();
-            GetComponent<SceneLoader>().LoadPreviousSceneDelay((float) 0.33);
-        }
-
-        public void LoadStage(StageConfig stageConfig)
-        {
-            Store.NextStageConfig = stageConfig;
             PlayHideAnimation();
             GetComponent<SceneLoader>().LoadNextSceneDelay((float) 0.33);
+        }
+
+        public void GameInfo()
+        {
+            PlayHideAnimation();
+            GetComponent<SceneLoader>().LoadSceneDelay(Store.SceneGameInfo, (float) 0.33);
         }
 
         private void PlayHideAnimation()

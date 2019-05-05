@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e65e16f880aafb4cb7dc6c2ff92eed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  versionString: v1.2.3
+  versionString: v1.2.4
   versionStringText: {fileID: 1591992077}
 --- !u!1001 &702616449
 PrefabInstance:
@@ -738,7 +738,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1981343260}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
