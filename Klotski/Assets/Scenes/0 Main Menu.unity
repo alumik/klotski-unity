@@ -1585,7 +1585,6 @@ GameObject:
   - component: {fileID: 2812300023452203644}
   - component: {fileID: 2812300023452203632}
   - component: {fileID: 2812300023452203633}
-  - component: {fileID: 2812300023452203646}
   - component: {fileID: 2812300023452203647}
   m_Layer: 5
   m_Name: Depth 3
@@ -1594,20 +1593,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2812300023452203646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2812300023452203645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!225 &2812300023452203647
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1766,20 +1751,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &2812300024558422737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2812300024558422748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!222 &2812300024558422739
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1799,7 +1770,6 @@ GameObject:
   - component: {fileID: 2812300024558422751}
   - component: {fileID: 2812300024558422739}
   - component: {fileID: 2812300024558422736}
-  - component: {fileID: 2812300024558422737}
   - component: {fileID: 2812300024558422750}
   m_Layer: 5
   m_Name: Depth 1
@@ -1858,7 +1828,6 @@ GameObject:
   - component: {fileID: 2812300025106049229}
   - component: {fileID: 2812300025106049217}
   - component: {fileID: 2812300025106049230}
-  - component: {fileID: 2812300025106049231}
   - component: {fileID: 2812300025106049228}
   m_Layer: 5
   m_Name: Depth 2
@@ -1927,20 +1896,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &2812300025106049231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2812300025106049226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!1001 &3924149794878394383
 PrefabInstance:
   m_ObjectHideFlags: 0

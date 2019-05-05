@@ -2151,20 +2151,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &2812300023434217040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2812300023434217043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!225 &2812300023434217041
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2207,7 +2193,6 @@ GameObject:
   - component: {fileID: 2812300023434217042}
   - component: {fileID: 2812300023434217054}
   - component: {fileID: 2812300023434217055}
-  - component: {fileID: 2812300023434217040}
   - component: {fileID: 2812300023434217041}
   m_Layer: 5
   m_Name: Depth 3
@@ -2412,7 +2397,6 @@ GameObject:
   - component: {fileID: 2812300024540493553}
   - component: {fileID: 2812300024540493565}
   - component: {fileID: 2812300024540493566}
-  - component: {fileID: 2812300024540493567}
   - component: {fileID: 2812300024540493552}
   m_Layer: 5
   m_Name: Depth 1
@@ -2458,20 +2442,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &2812300024540493567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2812300024540493554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!114 &2812300025125328096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2501,20 +2471,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &2812300025125328097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2812300025125328100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!225 &2812300025125328098
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2557,7 +2513,6 @@ GameObject:
   - component: {fileID: 2812300025125328099}
   - component: {fileID: 2812300025125328111}
   - component: {fileID: 2812300025125328096}
-  - component: {fileID: 2812300025125328097}
   - component: {fileID: 2812300025125328098}
   m_Layer: 5
   m_Name: Depth 2

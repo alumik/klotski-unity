@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4111740619715519337}
   - component: {fileID: 4111740619715519349}
   - component: {fileID: 4111740619715519350}
-  - component: {fileID: 4111740619715519351}
   - component: {fileID: 4111740619715519336}
   m_Layer: 5
   m_Name: Depth 2
@@ -76,20 +75,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &4111740619715519351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4111740619715519338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!225 &4111740619715519336
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -304,7 +289,6 @@ GameObject:
   - component: {fileID: 4111740621617274009}
   - component: {fileID: 4111740621617273701}
   - component: {fileID: 4111740621617273702}
-  - component: {fileID: 4111740621617273703}
   - component: {fileID: 4111740621617274008}
   m_Layer: 5
   m_Name: Depth 3
@@ -369,20 +353,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &4111740621617273703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4111740621617274010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!225 &4111740621617274008
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -406,7 +376,6 @@ GameObject:
   - component: {fileID: 4111740621749437182}
   - component: {fileID: 4111740621749437178}
   - component: {fileID: 4111740621749437179}
-  - component: {fileID: 4111740621749437180}
   - component: {fileID: 4111740621749437181}
   m_Layer: 5
   m_Name: Depth 1
@@ -471,20 +440,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &4111740621749437180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4111740621749437183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!225 &4111740621749437181
 CanvasGroup:
   m_ObjectHideFlags: 0

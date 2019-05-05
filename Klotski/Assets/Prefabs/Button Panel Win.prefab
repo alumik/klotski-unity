@@ -1160,7 +1160,6 @@ GameObject:
   - component: {fileID: 8435908606009937472}
   - component: {fileID: 8435908606009937484}
   - component: {fileID: 8435908606009937475}
-  - component: {fileID: 8435908606009937474}
   - component: {fileID: 8435908606009937473}
   m_Layer: 5
   m_Name: Depth 1
@@ -1225,20 +1224,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &8435908606009937474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8435908606009937479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!225 &8435908606009937473
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1322,7 +1307,6 @@ GameObject:
   - component: {fileID: 8435908606105358944}
   - component: {fileID: 8435908606105358956}
   - component: {fileID: 8435908606105358947}
-  - component: {fileID: 8435908606105358946}
   - component: {fileID: 8435908606105358945}
   m_Layer: 5
   m_Name: Depth 2
@@ -1387,20 +1371,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &8435908606105358946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8435908606105358951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!225 &8435908606105358945
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1424,7 +1394,6 @@ GameObject:
   - component: {fileID: 8435908606467241379}
   - component: {fileID: 8435908606467241391}
   - component: {fileID: 8435908606467241390}
-  - component: {fileID: 8435908606467241389}
   - component: {fileID: 8435908606467241388}
   m_Layer: 5
   m_Name: Depth 1
@@ -1489,20 +1458,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &8435908606467241389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8435908606467241378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!225 &8435908606467241388
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1586,7 +1541,6 @@ GameObject:
   - component: {fileID: 8435908606773653465}
   - component: {fileID: 8435908606773653477}
   - component: {fileID: 8435908606773653476}
-  - component: {fileID: 8435908606773653467}
   - component: {fileID: 8435908606773653466}
   m_Layer: 5
   m_Name: Depth 3
@@ -1651,20 +1605,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &8435908606773653467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8435908606773653464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!225 &8435908606773653466
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1688,7 +1628,6 @@ GameObject:
   - component: {fileID: 8435908606790091448}
   - component: {fileID: 8435908606790091460}
   - component: {fileID: 8435908606790091451}
-  - component: {fileID: 8435908606790091450}
   - component: {fileID: 8435908606790091449}
   m_Layer: 5
   m_Name: Depth 2
@@ -1753,20 +1692,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &8435908606790091450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8435908606790091455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!225 &8435908606790091449
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1827,7 +1752,6 @@ GameObject:
   - component: {fileID: 8435908607088739285}
   - component: {fileID: 8435908607088739281}
   - component: {fileID: 8435908607088739280}
-  - component: {fileID: 8435908607088739287}
   - component: {fileID: 8435908607088739286}
   m_Layer: 5
   m_Name: Depth 3
@@ -1892,20 +1816,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &8435908607088739287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8435908607088739284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!225 &8435908607088739286
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2026,7 +1936,6 @@ GameObject:
   - component: {fileID: 8435908607344049362}
   - component: {fileID: 8435908607344049374}
   - component: {fileID: 8435908607344049373}
-  - component: {fileID: 8435908607344049372}
   - component: {fileID: 8435908607344049363}
   m_Layer: 5
   m_Name: Depth 3
@@ -2091,20 +2000,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &8435908607344049372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8435908607344049361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!225 &8435908607344049363
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2202,7 +2097,6 @@ GameObject:
   - component: {fileID: 8435908607801585043}
   - component: {fileID: 8435908607801585055}
   - component: {fileID: 8435908607801585054}
-  - component: {fileID: 8435908607801585053}
   - component: {fileID: 8435908607801585052}
   m_Layer: 5
   m_Name: Depth 2
@@ -2267,20 +2161,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &8435908607801585053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8435908607801585042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!225 &8435908607801585052
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2341,7 +2221,6 @@ GameObject:
   - component: {fileID: 8435908607859732000}
   - component: {fileID: 8435908607859732012}
   - component: {fileID: 8435908607859732003}
-  - component: {fileID: 8435908607859732002}
   - component: {fileID: 8435908607859732001}
   m_Layer: 5
   m_Name: Depth 1
@@ -2406,20 +2285,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &8435908607859732002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8435908607859732007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84fb88f80357bf14e8a30b1e2bfda1cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOn: 0
-  anim: 0
 --- !u!225 &8435908607859732001
 CanvasGroup:
   m_ObjectHideFlags: 0
