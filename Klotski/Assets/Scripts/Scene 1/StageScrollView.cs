@@ -82,6 +82,9 @@ namespace Scene_1
                 Destroy(stageItemObject);
             }
             playButton.GetComponentInChildren<TextMeshProUGUI>().text = "\uf074";
+            unfinished.SetActive(true);
+            steps.SetActive(false);
+            time.SetActive(false);
             unfinished.GetComponent<Text>().text = "随机游戏";
             playButton.GetComponent<Button>().onClick.RemoveAllListeners();
             playButton.GetComponent<Button>().onClick.AddListener(PlayRandom);
