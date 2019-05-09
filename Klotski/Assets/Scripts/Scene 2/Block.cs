@@ -81,9 +81,20 @@ namespace Scene_2
             if (Vector3.Distance(minPos, mPPos) > 0.1f)
             {
                 PlayArea.Instance.AddStep();
+                PlayArea.Instance.AddMove(gameObject, mPPos, minPos);
             }
 
             mPPos = minPos;
+        }
+
+        public void MoveTo(Vector3 position)
+        {
+            transform.position = position;
+            mPPos = position;
+            if (BackgroundMusic.Instance != null && BackgroundMusic.Instance.GetComponent<AudioSource>().isPlaying)
+            {
+                mAudioSource.PlayOneShot(mAudioSource.clip);
+            }
         }
     }
 }

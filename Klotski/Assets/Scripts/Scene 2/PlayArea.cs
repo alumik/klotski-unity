@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Common;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,8 @@ namespace Scene_2
         [SerializeField] private Text stepCounter;
         [SerializeField] private Text timer;
         [SerializeField] private StageAnimator animator;
+        [SerializeField] private Button undoButton;
+        [SerializeField] private Button redoButton;
 
         private GameObject[,] mGrid;
         private StageConfig mStageConfig;
@@ -20,8 +23,17 @@ namespace Scene_2
         private int mSteps;
         private float mTime;
         private bool mStarted;
+        private Stack<PlayerMove> mPlayerMovesL = new Stack<PlayerMove>();
+        private Stack<PlayerMove> mPlayerMovesR = new Stack<PlayerMove>();
         private static PlayArea mInstance;
         public static PlayArea Instance => mInstance;
+        
+        private struct PlayerMove
+        {
+            public GameObject Block;
+            public Vector3 OldPosition;
+            public Vector3 NewPosition;
+        }
 
         private void Awake()
         {
@@ -61,6 +73,7 @@ namespace Scene_2
         public void ResetGame()
         {
             RemoveBlocks();
+            ResetStacks();
             ResetSteps();
             ResetTime();
             InitGrid();
@@ -72,6 +85,63 @@ namespace Scene_2
             return mGridPos;
         }
 
+        public void AddMove(GameObject block, Vector3 oldPosition, Vector3 newPosition)
+        {
+            var move = new PlayerMove {Block = block, OldPosition = oldPosition, NewPosition = newPosition};
+            mPlayerMovesR.Clear();
+            redoButton.interactable = false;
+            mPlayerMovesL.Push(move);
+            undoButton.interactable = true;
+        }
+
+        public void UndoMove()
+        {
+            if (mPlayerMovesL.Count > 0)
+            {
+                var move = mPlayerMovesL.Pop();
+                mPlayerMovesR.Push(move);
+                redoButton.interactable = true;
+                move.Block.GetComponent<Block>().MoveTo(move.OldPosition);
+                SubtractStep();
+
+                if (mPlayerMovesL.Count == 0)
+                {
+                    undoButton.interactable = false;
+                }
+            }
+        }
+
+        public void RedoMove()
+        {
+            if (mPlayerMovesR.Count > 0)
+            {
+                var move = mPlayerMovesR.Pop();
+                mPlayerMovesL.Push(move);
+                undoButton.interactable = true;
+                move.Block.GetComponent<Block>().MoveTo(move.NewPosition);
+                AddStep();
+                
+                if (mPlayerMovesR.Count == 0)
+                {
+                    redoButton.interactable = false;
+                }
+            }
+        }
+
+        private void SubtractStep()
+        {
+            mSteps--;
+            stepCounter.text = mSteps + " 步";
+        }
+
+        private void ResetStacks()
+        {
+            mPlayerMovesL.Clear();
+            mPlayerMovesR.Clear();
+            undoButton.interactable = false;
+            redoButton.interactable = false;
+        }
+        
         private void AddTime()
         {
             if (mStarted)
