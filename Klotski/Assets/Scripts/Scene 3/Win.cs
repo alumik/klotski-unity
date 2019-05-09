@@ -9,6 +9,7 @@ namespace Scene_3
     {
         [SerializeField] private Text stepCounter;
         [SerializeField] private Text time;
+        [SerializeField] private GameObject newRecord;
         [SerializeField] private Text bestStepCounter;
         [SerializeField] private Text bestTime;
         [SerializeField] private GameObject minSteps;
@@ -23,7 +24,10 @@ namespace Scene_3
 
             var stageConfig = Store.NextStageConfig;
 
-            Store.Db.SaveResult(stageConfig.GetStageId(), Store.Steps, Store.Time);
+            if (Store.Db.SaveResult(stageConfig.GetStageId(), Store.Steps, Store.Time))
+            {
+                newRecord.SetActive(true);
+            }
             var timeSpan = TimeSpan.FromSeconds(Store.Time);
             var timeText = $"{timeSpan.Hours:D2}:{timeSpan.Minutes:D2}:{timeSpan.Seconds:D2}";
             time.text = "用时 " + timeText;

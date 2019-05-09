@@ -37,12 +37,13 @@ namespace Common
             mCon.Close();
         }
 
-        public void SaveResult(int stageId, int steps, int time)
+        public bool SaveResult(int stageId, int steps, int time)
         {
             mCon.Open();
             var dbCmd = mCon.CreateCommand();
             dbCmd.CommandText = "SELECT count(*) FROM stage_progress WHERE id=@stageId";
             dbCmd.Parameters.Add(new SqliteParameter("@stageId", stageId));
+            var newRecord = false;
             if (Convert.ToInt32(dbCmd.ExecuteScalar()) == 0)
             {
                 dbCmd.CommandText = "INSERT INTO stage_progress VALUES (@stageId, @steps, @time)";
@@ -50,6 +51,7 @@ namespace Common
                 dbCmd.Parameters.Add(new SqliteParameter("@steps", steps));
                 dbCmd.Parameters.Add(new SqliteParameter("@time", time));
                 dbCmd.ExecuteNonQuery();
+                newRecord = true;
             }
             else
             {
@@ -60,13 +62,14 @@ namespace Common
                 var bestSteps = Convert.ToInt32(reader[0]);
                 var bestTime = Convert.ToInt32(reader[1]);
                 reader.Close();
-
+                
                 if (bestSteps > steps)
                 {
                     dbCmd.CommandText = "UPDATE stage_progress SET best_steps=@steps WHERE id=@stageId";
                     dbCmd.Parameters.Add(new SqliteParameter("@stageId", stageId));
                     dbCmd.Parameters.Add(new SqliteParameter("@steps", steps));
                     dbCmd.ExecuteNonQuery();
+                    newRecord = true;
                 }
 
                 if (bestTime > time)
@@ -79,6 +82,7 @@ namespace Common
             }
 
             mCon.Close();
+            return newRecord;
         }
 
         public struct Result
