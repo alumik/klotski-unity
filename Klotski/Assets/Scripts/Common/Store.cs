@@ -15,7 +15,8 @@ namespace Common
         public static int Difficulty = 0;
 
         public const int SceneMainMenu = 0;
-        public const int SceneLevelSelector = 1;
+        public const int SceneStageSelector = 1;
+        public const int SceneStage = 2;
         public const int SceneGameInfo = 4;
 
         public const int ConfigColor = 1;

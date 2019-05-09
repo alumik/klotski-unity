@@ -195,7 +195,7 @@ PrefabInstance:
     - target: {fileID: 1331682236506160765, guid: 55e392b10750b4643ac0a5e22c4f2f3c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -340
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1331682236506160765, guid: 55e392b10750b4643ac0a5e22c4f2f3c,
         type: 3}
@@ -289,6 +289,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e392b10750b4643ac0a5e22c4f2f3c, type: 3}
+--- !u!1 &39547721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1331682236506160764, guid: 55e392b10750b4643ac0a5e22c4f2f3c,
+    type: 3}
+  m_PrefabInstance: {fileID: 36959207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &274050904
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +709,7 @@ PrefabInstance:
     - target: {fileID: 1173692635146620871, guid: 58f8ef0ec64645a45be20cda6ac21de6,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 340
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 1173692635146620871, guid: 58f8ef0ec64645a45be20cda6ac21de6,
         type: 3}
@@ -869,7 +875,7 @@ PrefabInstance:
     - target: {fileID: 1331682236506160765, guid: 55e392b10750b4643ac0a5e22c4f2f3c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -320
       objectReference: {fileID: 0}
     - target: {fileID: 1331682236506160765, guid: 55e392b10750b4643ac0a5e22c4f2f3c,
         type: 3}
@@ -1066,7 +1072,7 @@ MonoBehaviour:
   time: {fileID: 1193513600}
   bestStepCounter: {fileID: 497938277}
   bestTime: {fileID: 449261123}
-  minSteps: {fileID: 1348943564}
+  minSteps: {fileID: 39547721}
   stageName: {fileID: 274050905}
 --- !u!1 &781721202
 GameObject:
@@ -1625,18 +1631,6 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1220166293}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1348943564 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1331682237368744159, guid: 55e392b10750b4643ac0a5e22c4f2f3c,
-    type: 3}
-  m_PrefabInstance: {fileID: 36959207}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1440668758
 GameObject:
   m_ObjectHideFlags: 0

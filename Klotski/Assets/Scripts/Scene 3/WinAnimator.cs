@@ -23,7 +23,15 @@ namespace Scene_3
         public void Next()
         {
             PlayHideAnimation();
-            GetComponent<SceneLoader>().LoadSceneDelay(Store.SceneLevelSelector, (float) 0.33);
+            Store.NextStageConfig = Store.NextStageConfig.GetNextStage();
+            if (Store.NextStageConfig != null)
+            {
+                GetComponent<SceneLoader>().LoadSceneDelay(Store.SceneStage, (float) 0.33);
+            }
+            else
+            {
+                GetComponent<SceneLoader>().LoadSceneDelay(Store.SceneStageSelector, (float) 0.33);
+            }
         }
 
         private void PlayHideAnimation()

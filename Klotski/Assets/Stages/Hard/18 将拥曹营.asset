@@ -16,6 +16,7 @@ MonoBehaviour:
   stageId: 18
   stageName: "\u5C06\u62E5\u66F9\u8425"
   minSteps: 0
+  nextStage: {fileID: 11400000, guid: c9614d72c17f9994f8f036eee70b991e, type: 2}
   blocks:
   - type: 0
     x: 0
