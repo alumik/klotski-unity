@@ -11,6 +11,7 @@ namespace Scene_3
         [SerializeField] private Text time;
         [SerializeField] private Text bestStepCounter;
         [SerializeField] private Text bestTime;
+        [SerializeField] private GameObject minSteps;
         [SerializeField] private Text stageName;
 
         private void Start()
@@ -34,6 +35,14 @@ namespace Scene_3
             timeSpan = TimeSpan.FromSeconds(result.BestTime);
             timeText = $"{timeSpan.Hours:D2}:{timeSpan.Minutes:D2}:{timeSpan.Seconds:D2}";
             bestTime.text = timeText;
+            if (stageConfig.GetMinSteps() != 0)
+            {
+                minSteps.transform.GetChild(0).GetComponent<Text>().text = stageConfig.GetMinSteps().ToString();
+            }
+            else
+            {
+                minSteps.SetActive(false);
+            }
         }
 
         private void Update()

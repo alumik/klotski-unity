@@ -29,6 +29,7 @@ namespace Scene_1
         [SerializeField] private GameObject playButton;
         [SerializeField] private GameObject steps;
         [SerializeField] private GameObject time;
+        [SerializeField] private GameObject minSteps;
         [SerializeField] private GameObject unfinished;
         [SerializeField] private Text changeDifficultyButton;
 
@@ -85,6 +86,7 @@ namespace Scene_1
             unfinished.SetActive(true);
             steps.SetActive(false);
             time.SetActive(false);
+            minSteps.SetActive(false);
             unfinished.GetComponent<Text>().text = "随机游戏";
             playButton.GetComponent<Button>().onClick.RemoveAllListeners();
             playButton.GetComponent<Button>().onClick.AddListener(PlayRandom);
@@ -186,6 +188,11 @@ namespace Scene_1
                 unfinished.SetActive(false);
                 steps.SetActive(true);
                 time.SetActive(true);
+                if (stageConfig.GetMinSteps() != 0)
+                {
+                    minSteps.SetActive(true);
+                    minSteps.transform.GetChild(0).GetComponent<Text>().text = stageConfig.GetMinSteps().ToString();
+                }
                 steps.transform.GetChild(0).GetComponent<Text>().text = result.BestSteps.ToString();
                 var timeSpan = TimeSpan.FromSeconds(result.BestTime);
                 var timeText = $"{timeSpan.Hours:D2}:{timeSpan.Minutes:D2}:{timeSpan.Seconds:D2}";
@@ -196,6 +203,7 @@ namespace Scene_1
                 unfinished.SetActive(true);
                 unfinished.GetComponent<Text>().text = "未完成";
                 steps.SetActive(false);
+                minSteps.SetActive(false);
                 time.SetActive(false);
             }
         }
