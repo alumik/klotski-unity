@@ -2,4 +2,4 @@
 
 项目基于 [Unity](https://unity.com/) 制作。
 
-Unity 版本为 2019.1.0f2 。
+Unity 版本为 2019.1.1f1 。
