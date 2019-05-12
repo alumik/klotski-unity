@@ -39,6 +39,7 @@ namespace Scene_2
                 var mouseScreenPos = Input.mousePosition;
                 mouseScreenPos.z = 10f;
                 mPMousePos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
+                // mPMousePos -= transform.position;
                 rb.bodyType = RigidbodyType2D.Dynamic;
             }
         }
@@ -50,6 +51,7 @@ namespace Scene_2
                 var mouseScreenPos = Input.mousePosition;
                 mouseScreenPos.z = 10f;
                 var mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
+                // rb.velocity = (mouseWorldPos - mPMousePos - transform.position) * 50;
                 rb.velocity = (mouseWorldPos - mPMousePos) * moveSpeed;
                 mPMousePos = mouseWorldPos;
             }
